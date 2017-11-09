@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ofirbed/Desktop/Ass1/BaseFile.cpp
+Files.h
+/home/ofirbed/Desktop/Ass1/Files.h
+
+/home/ofirbed/Desktop/Ass1/Directory.cpp
+algorithm
+-
+Files.h
+/home/ofirbed/Desktop/Ass1/Files.h
+
+/home/ofirbed/Desktop/Ass1/File.cpp
+Files.h
+/home/ofirbed/Desktop/Ass1/Files.h
+
+/home/ofirbed/Desktop/Ass1/Files.h
+string
+-
+vector
+-
+
+/home/ofirbed/Desktop/Ass1/main.cpp
+iostream
+-
+
