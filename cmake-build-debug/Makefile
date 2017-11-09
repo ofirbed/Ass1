@@ -48,10 +48,10 @@ RM = /home/chaimbgu/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chaimbgu/Desktop/Ass1/Ass1
+CMAKE_SOURCE_DIR = /home/chaimbgu/CLionProjects/ass1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/chaimbgu/CLionProjects/ass1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/CMakeFiles /home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chaimbgu/CLionProjects/ass1/cmake-build-debug/CMakeFiles /home/chaimbgu/CLionProjects/ass1/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chaimbgu/CLionProjects/ass1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,98 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Ass1
+# Target rules for targets named ass1
 
 # Build rule for target.
-Ass1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Ass1
-.PHONY : Ass1
+ass1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ass1
+.PHONY : ass1
 
 # fast build rule for target.
-Ass1/fast:
-	$(MAKE) -f CMakeFiles/Ass1.dir/build.make CMakeFiles/Ass1.dir/build
-.PHONY : Ass1/fast
+ass1/fast:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/build
+.PHONY : ass1/fast
+
+BaseFile.o: BaseFile.cpp.o
+
+.PHONY : BaseFile.o
+
+# target to build an object file
+BaseFile.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/BaseFile.cpp.o
+.PHONY : BaseFile.cpp.o
+
+BaseFile.i: BaseFile.cpp.i
+
+.PHONY : BaseFile.i
+
+# target to preprocess a source file
+BaseFile.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/BaseFile.cpp.i
+.PHONY : BaseFile.cpp.i
+
+BaseFile.s: BaseFile.cpp.s
+
+.PHONY : BaseFile.s
+
+# target to generate assembly for a file
+BaseFile.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/BaseFile.cpp.s
+.PHONY : BaseFile.cpp.s
+
+Directory.o: Directory.cpp.o
+
+.PHONY : Directory.o
+
+# target to build an object file
+Directory.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/Directory.cpp.o
+.PHONY : Directory.cpp.o
+
+Directory.i: Directory.cpp.i
+
+.PHONY : Directory.i
+
+# target to preprocess a source file
+Directory.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/Directory.cpp.i
+.PHONY : Directory.cpp.i
+
+Directory.s: Directory.cpp.s
+
+.PHONY : Directory.s
+
+# target to generate assembly for a file
+Directory.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/Directory.cpp.s
+.PHONY : Directory.cpp.s
+
+File.o: File.cpp.o
+
+.PHONY : File.o
+
+# target to build an object file
+File.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/File.cpp.o
+.PHONY : File.cpp.o
+
+File.i: File.cpp.i
+
+.PHONY : File.i
+
+# target to preprocess a source file
+File.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/File.cpp.i
+.PHONY : File.cpp.i
+
+File.s: File.cpp.s
+
+.PHONY : File.s
+
+# target to generate assembly for a file
+File.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/File.cpp.s
+.PHONY : File.cpp.s
 
 main.o: main.cpp.o
 
@@ -129,7 +210,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/Ass1.dir/build.make CMakeFiles/Ass1.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +219,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/Ass1.dir/build.make CMakeFiles/Ass1.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,7 +228,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/Ass1.dir/build.make CMakeFiles/Ass1.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -158,7 +239,16 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Ass1"
+	@echo "... ass1"
+	@echo "... BaseFile.o"
+	@echo "... BaseFile.i"
+	@echo "... BaseFile.s"
+	@echo "... Directory.o"
+	@echo "... Directory.i"
+	@echo "... Directory.s"
+	@echo "... File.o"
+	@echo "... File.i"
+	@echo "... File.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
