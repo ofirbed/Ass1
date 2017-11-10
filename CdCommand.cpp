@@ -8,7 +8,7 @@ using namespace std;
 CdCommand::CdCommand(string args) :BaseCommand(args){
 
 void CdCommand::execute(FileSystem &fs){
-
+    fs.cdCommand(args);
 
 
     }
