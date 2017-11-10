@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ass1.dir/BaseFile.cpp.o"
   "CMakeFiles/ass1.dir/File.cpp.o"
   "CMakeFiles/ass1.dir/Directory.cpp.o"
+  "CMakeFiles/ass1.dir/Environment.cpp.o"
   "ass1.pdb"
   "ass1"
 )

@@ -93,6 +93,12 @@
 		<Unit filename="/home/ofirbed/Desktop/Ass1/Directory.h">
 			<Option target="ass1"/>
 		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/Environment.cpp">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/Environment.h">
+			<Option target="ass1"/>
+		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/File.cpp">
 			<Option target="ass1"/>
 		</Unit>

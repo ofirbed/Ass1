@@ -177,6 +177,33 @@ Directory.cpp.s:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/Directory.cpp.s
 .PHONY : Directory.cpp.s
 
+Environment.o: Environment.cpp.o
+
+.PHONY : Environment.o
+
+# target to build an object file
+Environment.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/Environment.cpp.o
+.PHONY : Environment.cpp.o
+
+Environment.i: Environment.cpp.i
+
+.PHONY : Environment.i
+
+# target to preprocess a source file
+Environment.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/Environment.cpp.i
+.PHONY : Environment.cpp.i
+
+Environment.s: Environment.cpp.s
+
+.PHONY : Environment.s
+
+# target to generate assembly for a file
+Environment.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/Environment.cpp.s
+.PHONY : Environment.cpp.s
+
 File.o: File.cpp.o
 
 .PHONY : File.o
@@ -246,6 +273,9 @@ help:
 	@echo "... Directory.o"
 	@echo "... Directory.i"
 	@echo "... Directory.s"
+	@echo "... Environment.o"
+	@echo "... Environment.i"
+	@echo "... Environment.s"
 	@echo "... File.o"
 	@echo "... File.i"
 	@echo "... File.s"
