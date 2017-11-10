@@ -33,6 +33,7 @@ private:
 
 public:
 	Directory(string name, Directory *parent); // Constructor
+	Directory (const Directory* other);
 	Directory *getParent() const; // Return a pointer to the parent of this directory
 	void setParent(Directory *newParent); // Change the parent of this directory
 	void addFile(BaseFile* file); // Add the file to children
@@ -43,6 +44,7 @@ public:
 	vector<BaseFile*> getChildren(); // Return children
 	int getSize(); // Return the size of the directory (recursively)
 	string getAbsolutePath();  //Return the path from the root to this
+    Directory* getChildByName(string name);
 	
 };
 

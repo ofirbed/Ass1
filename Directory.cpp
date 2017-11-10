@@ -8,11 +8,22 @@ using namespace std;
 Directory::Directory(string name, Directory *parent) :BaseFile(name){
     this->parent=parent;
 }
+//Directory::Directory (const Directory* other):BaseFile(other->getName()){
 
+//}
+//void operator = (const Directory&other){
+    //this->setName(other.getName());
+  //  parent = parent
+
+//}
+//Directory* clone(){
+  //  return new Directory(*this);
+//}
 Directory* Directory::getParent() const {return parent;}
 void Directory::setParent(Directory *newParent) {parent=newParent;}
 void Directory::addFile(BaseFile *file) {
     children.push_back(file);
+
 
 }
 void Directory::removeFile(string name) {
@@ -89,6 +100,15 @@ string Directory::getAbsolutePath() {
         return "/";
     return parent->getAbsolutePath()+"/"+getName();//write the absolute path recursively
 
+
+}
+Directory* Directory::getChildByName(string name) {
+    for( int i=0;i<children.size();i++){
+
+        if(name.compare(children.at(i)->getName())==0)
+            return (Directory*)children.at(i);
+        return NULL;
+    }
 
 }
 
