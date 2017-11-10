@@ -5,11 +5,11 @@
 #include "Commands.h"
 using namespace std;
 
-CdCommand::CdCommand(string args) :BaseCommand(args){
+CdCommand::CdCommand(string args) :BaseCommand(args){}
 
 void CdCommand::execute(FileSystem &fs){
-    fs.cdCommand(args);
+    fs.cdCommand(getArgs());
 
 
     }
-}
+string CdCommand::toString() {}

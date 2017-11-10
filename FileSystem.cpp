@@ -17,14 +17,21 @@ Directory& FileSystem::getRootDirectory() const {
 }
 FileSystem::FileSystem():rootDirectory(new Directory("/",NULL)) {
     workingDirectory = rootDirectory;// probably not good line
+     }
 
 
+
+Directory& FileSystem::getWorkingDirectory() const {
+    return *workingDirectory;
 }
-Directory& FileSystem::getWorkingDirectory() const { return  *workingDirectory;}
+
+
 void FileSystem::setWorkingDirectory(Directory *newWorkingDirectory) {
     workingDirectory=newWorkingDirectory;
 
 }
+
+
 bool FileSystem::cdCommand(string path) {
     Directory* currDirectory = workingDirectory;
         if(path.compare("..")==0){

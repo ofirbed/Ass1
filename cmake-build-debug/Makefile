@@ -123,6 +123,33 @@ ass1/fast:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/build
 .PHONY : ass1/fast
 
+BaseCommand.o: BaseCommand.cpp.o
+
+.PHONY : BaseCommand.o
+
+# target to build an object file
+BaseCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/BaseCommand.cpp.o
+.PHONY : BaseCommand.cpp.o
+
+BaseCommand.i: BaseCommand.cpp.i
+
+.PHONY : BaseCommand.i
+
+# target to preprocess a source file
+BaseCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/BaseCommand.cpp.i
+.PHONY : BaseCommand.cpp.i
+
+BaseCommand.s: BaseCommand.cpp.s
+
+.PHONY : BaseCommand.s
+
+# target to generate assembly for a file
+BaseCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/BaseCommand.cpp.s
+.PHONY : BaseCommand.cpp.s
+
 BaseFile.o: BaseFile.cpp.o
 
 .PHONY : BaseFile.o
@@ -149,6 +176,33 @@ BaseFile.s: BaseFile.cpp.s
 BaseFile.cpp.s:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/BaseFile.cpp.s
 .PHONY : BaseFile.cpp.s
+
+CdCommand.o: CdCommand.cpp.o
+
+.PHONY : CdCommand.o
+
+# target to build an object file
+CdCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/CdCommand.cpp.o
+.PHONY : CdCommand.cpp.o
+
+CdCommand.i: CdCommand.cpp.i
+
+.PHONY : CdCommand.i
+
+# target to preprocess a source file
+CdCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/CdCommand.cpp.i
+.PHONY : CdCommand.cpp.i
+
+CdCommand.s: CdCommand.cpp.s
+
+.PHONY : CdCommand.s
+
+# target to generate assembly for a file
+CdCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/CdCommand.cpp.s
+.PHONY : CdCommand.cpp.s
 
 Directory.o: Directory.cpp.o
 
@@ -231,6 +285,114 @@ File.cpp.s:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/File.cpp.s
 .PHONY : File.cpp.s
 
+FileSystem.o: FileSystem.cpp.o
+
+.PHONY : FileSystem.o
+
+# target to build an object file
+FileSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/FileSystem.cpp.o
+.PHONY : FileSystem.cpp.o
+
+FileSystem.i: FileSystem.cpp.i
+
+.PHONY : FileSystem.i
+
+# target to preprocess a source file
+FileSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/FileSystem.cpp.i
+.PHONY : FileSystem.cpp.i
+
+FileSystem.s: FileSystem.cpp.s
+
+.PHONY : FileSystem.s
+
+# target to generate assembly for a file
+FileSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/FileSystem.cpp.s
+.PHONY : FileSystem.cpp.s
+
+LsCommand.o: LsCommand.cpp.o
+
+.PHONY : LsCommand.o
+
+# target to build an object file
+LsCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/LsCommand.cpp.o
+.PHONY : LsCommand.cpp.o
+
+LsCommand.i: LsCommand.cpp.i
+
+.PHONY : LsCommand.i
+
+# target to preprocess a source file
+LsCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/LsCommand.cpp.i
+.PHONY : LsCommand.cpp.i
+
+LsCommand.s: LsCommand.cpp.s
+
+.PHONY : LsCommand.s
+
+# target to generate assembly for a file
+LsCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/LsCommand.cpp.s
+.PHONY : LsCommand.cpp.s
+
+Main.o: Main.cpp.o
+
+.PHONY : Main.o
+
+# target to build an object file
+Main.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/Main.cpp.o
+.PHONY : Main.cpp.o
+
+Main.i: Main.cpp.i
+
+.PHONY : Main.i
+
+# target to preprocess a source file
+Main.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/Main.cpp.i
+.PHONY : Main.cpp.i
+
+Main.s: Main.cpp.s
+
+.PHONY : Main.s
+
+# target to generate assembly for a file
+Main.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/Main.cpp.s
+.PHONY : Main.cpp.s
+
+PwdCommand.o: PwdCommand.cpp.o
+
+.PHONY : PwdCommand.o
+
+# target to build an object file
+PwdCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/PwdCommand.cpp.o
+.PHONY : PwdCommand.cpp.o
+
+PwdCommand.i: PwdCommand.cpp.i
+
+.PHONY : PwdCommand.i
+
+# target to preprocess a source file
+PwdCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/PwdCommand.cpp.i
+.PHONY : PwdCommand.cpp.i
+
+PwdCommand.s: PwdCommand.cpp.s
+
+.PHONY : PwdCommand.s
+
+# target to generate assembly for a file
+PwdCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/PwdCommand.cpp.s
+.PHONY : PwdCommand.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -267,9 +429,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ass1"
+	@echo "... BaseCommand.o"
+	@echo "... BaseCommand.i"
+	@echo "... BaseCommand.s"
 	@echo "... BaseFile.o"
 	@echo "... BaseFile.i"
 	@echo "... BaseFile.s"
+	@echo "... CdCommand.o"
+	@echo "... CdCommand.i"
+	@echo "... CdCommand.s"
 	@echo "... Directory.o"
 	@echo "... Directory.i"
 	@echo "... Directory.s"
@@ -279,6 +447,18 @@ help:
 	@echo "... File.o"
 	@echo "... File.i"
 	@echo "... File.s"
+	@echo "... FileSystem.o"
+	@echo "... FileSystem.i"
+	@echo "... FileSystem.s"
+	@echo "... LsCommand.o"
+	@echo "... LsCommand.i"
+	@echo "... LsCommand.s"
+	@echo "... Main.o"
+	@echo "... Main.i"
+	@echo "... Main.s"
+	@echo "... PwdCommand.o"
+	@echo "... PwdCommand.i"
+	@echo "... PwdCommand.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

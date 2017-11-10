@@ -6,9 +6,23 @@
 
 #IncludeRegexTransform: 
 
+/home/ofirbed/Desktop/Ass1/BaseCommand.cpp
+Commands.h
+/home/ofirbed/Desktop/Ass1/Commands.h
+
 /home/ofirbed/Desktop/Ass1/BaseFile.cpp
 Files.h
 /home/ofirbed/Desktop/Ass1/Files.h
+
+/home/ofirbed/Desktop/Ass1/CdCommand.cpp
+Commands.h
+/home/ofirbed/Desktop/Ass1/Commands.h
+
+/home/ofirbed/Desktop/Ass1/Commands.h
+string
+-
+FileSystem.h
+/home/ofirbed/Desktop/Ass1/FileSystem.h
 
 /home/ofirbed/Desktop/Ass1/Directory.cpp
 algorithm
@@ -16,7 +30,53 @@ algorithm
 Files.h
 /home/ofirbed/Desktop/Ass1/Files.h
 
+/home/ofirbed/Desktop/Ass1/Environment.cpp
+iostream
+-
+algorithm
+-
+Environment.h
+/home/ofirbed/Desktop/Ass1/Environment.h
+array
+-
+functional
+-
+sstream
+-
+
+/home/ofirbed/Desktop/Ass1/Environment.h
+Files.h
+/home/ofirbed/Desktop/Ass1/Files.h
+Commands.h
+/home/ofirbed/Desktop/Ass1/Commands.h
+string
+-
+vector
+-
+
 /home/ofirbed/Desktop/Ass1/File.cpp
+Files.h
+/home/ofirbed/Desktop/Ass1/Files.h
+
+/home/ofirbed/Desktop/Ass1/FileSystem.cpp
+FileSystem.h
+/home/ofirbed/Desktop/Ass1/FileSystem.h
+algorithm
+-
+array
+-
+iostream
+-
+functional
+-
+iostream
+-
+string
+-
+sstream
+-
+
+/home/ofirbed/Desktop/Ass1/FileSystem.h
 Files.h
 /home/ofirbed/Desktop/Ass1/Files.h
 
@@ -25,6 +85,18 @@ string
 -
 vector
 -
+
+/home/ofirbed/Desktop/Ass1/LsCommand.cpp
+Commands.h
+/home/ofirbed/Desktop/Ass1/Commands.h
+
+/home/ofirbed/Desktop/Ass1/Main.cpp
+Environment.h
+/home/ofirbed/Desktop/Ass1/Environment.h
+
+/home/ofirbed/Desktop/Ass1/PwdCommand.cpp
+Commands.h
+/home/ofirbed/Desktop/Ass1/Commands.h
 
 /home/ofirbed/Desktop/Ass1/main.cpp
 iostream

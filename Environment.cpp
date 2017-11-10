@@ -10,13 +10,13 @@
 #include <sstream>
 using namespace std;
 
-Environment::Environment(
-
-);
+Environment::Environment(){};
 
 void Environment ::start() {
 
-    std::cout << fs.getWorkingDirectory().getName() + ">" << std::endl;
+    std::cout << fs.getWorkingDirectory().getName() << std::endl;
+
+
 
 
     string userInput;

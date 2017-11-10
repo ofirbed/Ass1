@@ -2,7 +2,7 @@
 #define FILESYSTEM_H_
 
 #include "Files.h"
-using namespace std
+using namespace std;
 
 class FileSystem {
 private:

@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+using namespace std;
+
 class BaseFile {
 private:
 	string name;
@@ -30,6 +32,7 @@ class Directory : public BaseFile {
 private:
 	vector<BaseFile*> children;
 	Directory *parent;
+
 
 public:
 	Directory(string name, Directory *parent); // Constructor
