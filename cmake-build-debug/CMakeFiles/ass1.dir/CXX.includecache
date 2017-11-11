@@ -43,6 +43,8 @@ functional
 -
 sstream
 -
+iterator
+-
 
 /home/ofirbed/Desktop/Ass1/Environment.h
 Files.h
@@ -87,6 +89,8 @@ vector
 -
 
 /home/ofirbed/Desktop/Ass1/LsCommand.cpp
+iostream
+-
 Commands.h
 /home/ofirbed/Desktop/Ass1/Commands.h
 
@@ -95,6 +99,8 @@ Environment.h
 /home/ofirbed/Desktop/Ass1/Environment.h
 
 /home/ofirbed/Desktop/Ass1/PwdCommand.cpp
+iostream
+-
 Commands.h
 /home/ofirbed/Desktop/Ass1/Commands.h
 

@@ -8,13 +8,16 @@
 #include <array>
 #include <functional>
 #include <sstream>
+
+
+#include <iterator>
 using namespace std;
 
 Environment::Environment(){};
 
 void Environment ::start() {
 
-    std::cout << fs.getWorkingDirectory().getName() << std::endl;
+    std::cout << fs.getWorkingDirectory().getName();
 
 
 
@@ -27,11 +30,15 @@ void Environment ::start() {
 
 
        //separate the word by ' ' to recognize the command
-        vector<string> array;
-        stringstream ss(userInput);
-        string temp;
-        while (ss >> temp)
-            array.push_back(temp);
+       // vector<string> array;
+        //stringstream ss(userInput);
+        istringstream iss(userInput);
+        //string temp;
+        //while (getline(ss, temp,' '))
+          //  array.push_back(temp);
+
+        vector<string> array{istream_iterator<string>{iss},
+                              istream_iterator<string>{}};
 
         if(array.at(0).compare("pwd")==0) {
 
@@ -53,6 +60,14 @@ void Environment ::start() {
                         CdCommand cd(userInput.substr(3));
                         cd.execute(fs);
                     }
+                }else{
+                    if (array.at(0).compare("ls") == 0) {
+
+                            LsCommand cd(userInput.substr(3));
+                            cd.execute(fs);
+                        }
+
+
                 }
             }
 
@@ -68,7 +83,7 @@ void Environment ::start() {
  void Environment::  printError(string str){
 
 
-     cout << "str";
+     cout << str;
 
 }
 

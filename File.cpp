@@ -9,4 +9,8 @@ File::File(string name, int size): BaseFile(name){
 }
 int File::getSize() {return size;}
 
+string File::getType() {
+    return "FILE";
+}
+
 

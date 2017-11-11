@@ -112,4 +112,8 @@ Directory* Directory::getChildByName(string name) {
 
 }
 
+string Directory::getType() {
+    return "DIR";
+}
+
 
