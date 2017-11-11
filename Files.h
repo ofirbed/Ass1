@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+using namespace std;
+
 class BaseFile {
 private:
 	string name;
@@ -13,7 +15,10 @@ public:
 	string getName() const;
 	void setName(string newName);
 	virtual int getSize() = 0;
-	
+
+    virtual string getType() = 0;
+
+
 };
 
 class File : public BaseFile {
@@ -23,6 +28,8 @@ private:
 public:
 	File(string name, int size); // Constructor
 	int getSize(); // Return the size of the file
+
+    string getType();
 	
 };
 
@@ -31,8 +38,11 @@ private:
 	vector<BaseFile*> children;
 	Directory *parent;
 
+
+
 public:
 	Directory(string name, Directory *parent); // Constructor
+	Directory (const Directory* other);
 	Directory *getParent() const; // Return a pointer to the parent of this directory
 	void setParent(Directory *newParent); // Change the parent of this directory
 	void addFile(BaseFile* file); // Add the file to children
@@ -43,6 +53,9 @@ public:
 	vector<BaseFile*> getChildren(); // Return children
 	int getSize(); // Return the size of the directory (recursively)
 	string getAbsolutePath();  //Return the path from the root to this
+    Directory* getChildByName(string name);
+
+    string getType();
 	
 };
 

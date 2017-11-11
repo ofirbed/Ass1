@@ -84,19 +84,49 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/BaseCommand.cpp">
+			<Option target="ass1"/>
+		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/BaseFile.cpp">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/CdCommand.cpp">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/Commands.h">
 			<Option target="ass1"/>
 		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/Directory.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/Directory.h">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/Environment.cpp">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/Environment.h">
 			<Option target="ass1"/>
 		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/File.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/File.h">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/FileSystem.cpp">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/FileSystem.h">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/Files.h">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/GlobalVariables.h">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/LsCommand.cpp">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/Main.cpp">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/PwdCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/main.cpp">

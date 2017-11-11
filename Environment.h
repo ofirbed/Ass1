@@ -13,6 +13,7 @@ class Environment {
 private:
 	vector<BaseCommand*> commandsHistory;
 	FileSystem fs;
+    void printError(string str);
 
 public:
 	Environment();
@@ -20,6 +21,7 @@ public:
 	FileSystem& getFileSystem() const; // Get a reference to the file system
 	void addToHistory(BaseCommand *command); // Add a new command to the history
 	const vector<BaseCommand*>& getHistory() const; // Return a reference to the history of commands
+
 };
 
 #endif

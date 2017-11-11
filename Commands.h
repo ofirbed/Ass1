@@ -39,6 +39,7 @@ public:
 	LsCommand(string args);
 	void execute(FileSystem & fs);
 	string toString();
+	string getFileDetails(BaseFile &file);
 };
 
 class MkdirCommand : public BaseCommand {
