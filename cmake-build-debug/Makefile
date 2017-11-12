@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/ofirbed/Downloads/clion-2017.2.3/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/chaimbgu/clion-2017.2.3/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/ofirbed/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
+RM = /home/chaimbgu/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ofirbed/Desktop/Ass1
+CMAKE_SOURCE_DIR = /home/chaimbgu/Desktop/Ass1/Ass1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ofirbed/Desktop/Ass1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/ofirbed/Desktop/Ass1/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/ofirbed/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/chaimbgu/clion-2017.2.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/ofirbed/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/chaimbgu/clion-2017.2.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ofirbed/Desktop/Ass1/cmake-build-debug/CMakeFiles /home/ofirbed/Desktop/Ass1/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/CMakeFiles /home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ofirbed/Desktop/Ass1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -366,6 +366,33 @@ Main.cpp.s:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/Main.cpp.s
 .PHONY : Main.cpp.s
 
+MkdirCommand.o: MkdirCommand.cpp.o
+
+.PHONY : MkdirCommand.o
+
+# target to build an object file
+MkdirCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MkdirCommand.cpp.o
+.PHONY : MkdirCommand.cpp.o
+
+MkdirCommand.i: MkdirCommand.cpp.i
+
+.PHONY : MkdirCommand.i
+
+# target to preprocess a source file
+MkdirCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MkdirCommand.cpp.i
+.PHONY : MkdirCommand.cpp.i
+
+MkdirCommand.s: MkdirCommand.cpp.s
+
+.PHONY : MkdirCommand.s
+
+# target to generate assembly for a file
+MkdirCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MkdirCommand.cpp.s
+.PHONY : MkdirCommand.cpp.s
+
 PwdCommand.o: PwdCommand.cpp.o
 
 .PHONY : PwdCommand.o
@@ -456,6 +483,9 @@ help:
 	@echo "... Main.o"
 	@echo "... Main.i"
 	@echo "... Main.s"
+	@echo "... MkdirCommand.o"
+	@echo "... MkdirCommand.i"
+	@echo "... MkdirCommand.s"
 	@echo "... PwdCommand.o"
 	@echo "... PwdCommand.i"
 	@echo "... PwdCommand.s"

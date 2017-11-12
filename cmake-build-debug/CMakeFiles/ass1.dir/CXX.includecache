@@ -6,37 +6,51 @@
 
 #IncludeRegexTransform: 
 
-/home/ofirbed/Desktop/Ass1/BaseCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/BaseCommand.cpp
 Commands.h
-/home/ofirbed/Desktop/Ass1/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Commands.h
 
-/home/ofirbed/Desktop/Ass1/BaseFile.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/BaseFile.cpp
 Files.h
-/home/ofirbed/Desktop/Ass1/Files.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Files.h
 
-/home/ofirbed/Desktop/Ass1/CdCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/CdCommand.cpp
 Commands.h
-/home/ofirbed/Desktop/Ass1/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Commands.h
+iostream
+-
+algorithm
+-
+array
+-
+iostream
+-
+functional
+-
+string
+-
+sstream
+-
 
-/home/ofirbed/Desktop/Ass1/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Commands.h
 string
 -
 FileSystem.h
-/home/ofirbed/Desktop/Ass1/FileSystem.h
+/home/chaimbgu/Desktop/Ass1/Ass1/FileSystem.h
 
-/home/ofirbed/Desktop/Ass1/Directory.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/Directory.cpp
 algorithm
 -
 Files.h
-/home/ofirbed/Desktop/Ass1/Files.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Files.h
 
-/home/ofirbed/Desktop/Ass1/Environment.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/Environment.cpp
 iostream
 -
 algorithm
 -
 Environment.h
-/home/ofirbed/Desktop/Ass1/Environment.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Environment.h
 array
 -
 functional
@@ -46,23 +60,23 @@ sstream
 iterator
 -
 
-/home/ofirbed/Desktop/Ass1/Environment.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Environment.h
 Files.h
-/home/ofirbed/Desktop/Ass1/Files.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Files.h
 Commands.h
-/home/ofirbed/Desktop/Ass1/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Commands.h
 string
 -
 vector
 -
 
-/home/ofirbed/Desktop/Ass1/File.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/File.cpp
 Files.h
-/home/ofirbed/Desktop/Ass1/Files.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Files.h
 
-/home/ofirbed/Desktop/Ass1/FileSystem.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/FileSystem.cpp
 FileSystem.h
-/home/ofirbed/Desktop/Ass1/FileSystem.h
+/home/chaimbgu/Desktop/Ass1/Ass1/FileSystem.h
 algorithm
 -
 array
@@ -78,33 +92,51 @@ string
 sstream
 -
 
-/home/ofirbed/Desktop/Ass1/FileSystem.h
+/home/chaimbgu/Desktop/Ass1/Ass1/FileSystem.h
 Files.h
-/home/ofirbed/Desktop/Ass1/Files.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Files.h
 
-/home/ofirbed/Desktop/Ass1/Files.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Files.h
 string
 -
 vector
 -
 
-/home/ofirbed/Desktop/Ass1/LsCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/LsCommand.cpp
 iostream
 -
 Commands.h
-/home/ofirbed/Desktop/Ass1/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Commands.h
 
-/home/ofirbed/Desktop/Ass1/Main.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/Main.cpp
 Environment.h
-/home/ofirbed/Desktop/Ass1/Environment.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Environment.h
 
-/home/ofirbed/Desktop/Ass1/PwdCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/MkdirCommand.cpp
+Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Commands.h
+iostream
+-
+iostream
+-
+algorithm
+-
+array
+-
+iostream
+-
+functional
+-
+sstream
+-
+
+/home/chaimbgu/Desktop/Ass1/Ass1/PwdCommand.cpp
 iostream
 -
 Commands.h
-/home/ofirbed/Desktop/Ass1/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Commands.h
 
-/home/ofirbed/Desktop/Ass1/main.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/main.cpp
 iostream
 -
 
