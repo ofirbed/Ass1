@@ -366,6 +366,33 @@ Main.cpp.s:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/Main.cpp.s
 .PHONY : Main.cpp.s
 
+MkdirCommand.o: MkdirCommand.cpp.o
+
+.PHONY : MkdirCommand.o
+
+# target to build an object file
+MkdirCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MkdirCommand.cpp.o
+.PHONY : MkdirCommand.cpp.o
+
+MkdirCommand.i: MkdirCommand.cpp.i
+
+.PHONY : MkdirCommand.i
+
+# target to preprocess a source file
+MkdirCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MkdirCommand.cpp.i
+.PHONY : MkdirCommand.cpp.i
+
+MkdirCommand.s: MkdirCommand.cpp.s
+
+.PHONY : MkdirCommand.s
+
+# target to generate assembly for a file
+MkdirCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MkdirCommand.cpp.s
+.PHONY : MkdirCommand.cpp.s
+
 PwdCommand.o: PwdCommand.cpp.o
 
 .PHONY : PwdCommand.o
@@ -456,6 +483,9 @@ help:
 	@echo "... Main.o"
 	@echo "... Main.i"
 	@echo "... Main.s"
+	@echo "... MkdirCommand.o"
+	@echo "... MkdirCommand.i"
+	@echo "... MkdirCommand.s"
 	@echo "... PwdCommand.o"
 	@echo "... PwdCommand.i"
 	@echo "... PwdCommand.s"
