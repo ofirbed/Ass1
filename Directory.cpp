@@ -105,7 +105,7 @@ string Directory::getAbsolutePath() {
 Directory* Directory::getChildByName(string name) {
     for( int i=0;i<children.size();i++){
 
-        if(name.compare(children.at(i)->getName())==0)
+        if(name.compare(children.at(i)->getName())==0&&children.at(i)->getType().compare("DIR")==0)
             return (Directory*)children.at(i);
         return NULL;
     }
