@@ -53,7 +53,7 @@ void Environment ::start() {
         else{
                 if (array.at(0).compare("cd") == 0) {
 
-                    if (array.size() == 1)      //check if path after the command is exist
+                    if (array.size() != 1)      //check if path after the command is exist
                         printError("there is no path follow the command");
                     else {
 

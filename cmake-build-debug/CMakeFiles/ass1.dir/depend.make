@@ -46,6 +46,11 @@ CMakeFiles/ass1.dir/MkdirCommand.cpp.o: ../FileSystem.h
 CMakeFiles/ass1.dir/MkdirCommand.cpp.o: ../Files.h
 CMakeFiles/ass1.dir/MkdirCommand.cpp.o: ../MkdirCommand.cpp
 
+CMakeFiles/ass1.dir/MkfileCommand.cpp.o: ../Commands.h
+CMakeFiles/ass1.dir/MkfileCommand.cpp.o: ../FileSystem.h
+CMakeFiles/ass1.dir/MkfileCommand.cpp.o: ../Files.h
+CMakeFiles/ass1.dir/MkfileCommand.cpp.o: ../MkfileCommand.cpp
+
 CMakeFiles/ass1.dir/PwdCommand.cpp.o: ../Commands.h
 CMakeFiles/ass1.dir/PwdCommand.cpp.o: ../FileSystem.h
 CMakeFiles/ass1.dir/PwdCommand.cpp.o: ../Files.h

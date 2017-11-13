@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/chaimbgu/Desktop/Ass1/Ass1/LsCommand.cpp" "/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/CMakeFiles/ass1.dir/LsCommand.cpp.o"
   "/home/chaimbgu/Desktop/Ass1/Ass1/Main.cpp" "/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/CMakeFiles/ass1.dir/Main.cpp.o"
   "/home/chaimbgu/Desktop/Ass1/Ass1/MkdirCommand.cpp" "/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/CMakeFiles/ass1.dir/MkdirCommand.cpp.o"
+  "/home/chaimbgu/Desktop/Ass1/Ass1/MkfileCommand.cpp" "/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/CMakeFiles/ass1.dir/MkfileCommand.cpp.o"
   "/home/chaimbgu/Desktop/Ass1/Ass1/PwdCommand.cpp" "/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/CMakeFiles/ass1.dir/PwdCommand.cpp.o"
   "/home/chaimbgu/Desktop/Ass1/Ass1/main.cpp" "/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/CMakeFiles/ass1.dir/main.cpp.o"
   )

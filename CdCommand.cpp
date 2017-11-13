@@ -17,7 +17,8 @@ CdCommand::CdCommand(string args) :BaseCommand(args){}
 
 void CdCommand::execute(FileSystem &fs) {
     fs.cdCommand(getArgs());
-    string path = getArgs();
+}
+    /*string path = getArgs();
     Directory *currDirectory = &fs.getWorkingDirectory();
     if (path.compare("..") == 0) {
         currDirectory = currDirectory->getParent();
@@ -39,7 +40,7 @@ void CdCommand::execute(FileSystem &fs) {
             array.push_back(temp);
         currDirectory = &fs.getRootDirectory();
         for (signed int i = 0; i < array.size(); i++) {
-            currDirectory = currDirectory->getChildByName(array.at(i));
+            currDirectory = currDirectory->getDirChildByName(array.at(i));
             if (currDirectory == NULL)
                 std::cout << "not correct path";
 
@@ -56,10 +57,11 @@ void CdCommand::execute(FileSystem &fs) {
         array.push_back(temp);
     currDirectory = &fs.getWorkingDirectory();
     for (signed int i = 0; i < array.size(); i++) {
-        currDirectory = currDirectory->getChildByName(array.at(i));
+        currDirectory = currDirectory->getDirChildByName(array.at(i));
         if (currDirectory == NULL)
             std::cout << "not correct path";
     }
     fs.setWorkingDirectory(currDirectory);
-}
-string CdCommand::toString() {}
+}*/
+
+    string CdCommand::toString() {}

@@ -32,16 +32,16 @@ void FileSystem::setWorkingDirectory(Directory *newWorkingDirectory) {
 }
 
 
-bool FileSystem::cdCommand(string path) {
+int FileSystem::cdCommand(string path) {//return 0 if no path like this 1 if the last base file is directory and 2 if the last basefile is file
     Directory* currDirectory = workingDirectory;
         if(path.compare("..")==0){
             currDirectory= currDirectory->getParent();
             if (currDirectory!=NULL) {
                 workingDirectory = currDirectory;
-                return true;
+                return 1;
             }
             else
-                return false;
+                return 0;
 
         }
         if (path.at(0)=='/'){// if start from root
@@ -55,13 +55,19 @@ bool FileSystem::cdCommand(string path) {
                 array.push_back(temp);
             currDirectory = rootDirectory;
             for(signed int i =0;i<array.size();i++){
-                currDirectory = currDirectory->getChildByName(array.at(i));
-                if(currDirectory== NULL)
-                    return false;
+                BaseFile*  child= currDirectory->getDirChildByName(array.at(i));
+                if(child->getType().compare("DIR")==0)
+                    currDirectory=(Directory*)child;
+                //currDirectory = currDirectory->getDirChildByName(array.at(i));
+                else if (currDirectory == NULL|i<array.size()-1)
+                    return 0;
+
+                else
+                    return 2;
 
             }
             workingDirectory = currDirectory;
-            return true;
+            return 1;
 
 
         }
@@ -74,13 +80,20 @@ bool FileSystem::cdCommand(string path) {
         array.push_back(temp);
     currDirectory = workingDirectory;
     for (signed int i = 0; i < array.size(); i++) {
-        currDirectory = currDirectory->getChildByName(array.at(i));
-        if (currDirectory == NULL)
+        BaseFile*  child= currDirectory->getDirChildByName(array.at(i));
+        if(child->getType().compare("DIR")==0)
+        //currDirectory = currDirectory->getDirChildByName(array.at(i));
+            currDirectory=(Directory*)child;
+        else if (currDirectory == NULL|i<array.size()-1)
+            return 0;
 
-            return false;
+        else
+            return 2;
+
+
     }
     workingDirectory=currDirectory;
-    return true;
+    return 1;
 
 
 }
