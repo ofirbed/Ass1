@@ -10,6 +10,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <iterator>
 using namespace std;
 Directory& FileSystem::getRootDirectory() const {
 
@@ -55,7 +56,7 @@ bool FileSystem::cdCommand(string path) {
                 array.push_back(temp);
             currDirectory = rootDirectory;
             for(signed int i =0;i<array.size();i++){
-                currDirectory = currDirectory->getChildByName(array.at(i));
+                currDirectory = currDirectory->getDirChildByName(array.at(i));
                 if(currDirectory== NULL)
                     return false;
 
@@ -65,6 +66,7 @@ bool FileSystem::cdCommand(string path) {
 
 
         }
+
     std::replace(path.begin(), path.end(), '/', ' ');  // replace ':' by ' '
 
     vector<string> array;
@@ -72,9 +74,14 @@ bool FileSystem::cdCommand(string path) {
     string temp;
     while (ss >> temp)
         array.push_back(temp);
+
+    /*istringstream iss(path);
+
+    vector<string> array{istream_iterator<string>{iss},
+                         istream_iterator<string>{}};*/
     currDirectory = workingDirectory;
     for (signed int i = 0; i < array.size(); i++) {
-        currDirectory = currDirectory->getChildByName(array.at(i));
+        currDirectory = currDirectory->getDirChildByName(array.at(i));
         if (currDirectory == NULL)
 
             return false;

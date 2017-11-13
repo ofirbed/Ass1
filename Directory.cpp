@@ -86,6 +86,11 @@ void Directory::sortBySize() {
 }
 vector<BaseFile*> Directory::getChildren() {return children;}
 
+bool Directory ::pushToChildren(BaseFile * file) {
+
+    children.push_back(file);
+}
+
 
 int Directory::getSize() {
     int size = 0;
@@ -102,7 +107,7 @@ string Directory::getAbsolutePath() {
 
 
 }
-Directory* Directory::getChildByName(string name) {
+Directory* Directory::getDirChildByName(string name) {
     for( int i=0;i<children.size();i++){
 
         if(name.compare(children.at(i)->getName())==0&&children.at(i)->getType().compare("DIR")==0)

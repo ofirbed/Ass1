@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug"/>
+				<Option working_dir="/home/ofirbed/Desktop/Ass1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug"/>
+				<Option working_dir="/home/ofirbed/Desktop/Ass1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug"/>
+				<Option working_dir="/home/ofirbed/Desktop/Ass1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ass1">
-				<Option output="/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/ass1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug"/>
+				<Option output="/home/ofirbed/Desktop/Ass1/cmake-build-debug/ass1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ofirbed/Desktop/Ass1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ass1"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ass1"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ass1/fast">
-				<Option output="/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/ass1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug"/>
+				<Option output="/home/ofirbed/Desktop/Ass1/cmake-build-debug/ass1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ofirbed/Desktop/Ass1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,65 +77,65 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ass1/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/chaimbgu/Desktop/Ass1/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ass1/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ofirbed/Desktop/Ass1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/BaseCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/BaseCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/BaseFile.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/BaseFile.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/CdCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/CdCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/Commands.h">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/Commands.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/Directory.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/Directory.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/Environment.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/Environment.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/Environment.h">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/Environment.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/File.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/File.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/FileSystem.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/FileSystem.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/FileSystem.h">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/FileSystem.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/Files.h">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/Files.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/GlobalVariables.h">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/GlobalVariables.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/LsCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/LsCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/Main.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/Main.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/MkdirCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/MkdirCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/PwdCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/PwdCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/main.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/main.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/CMakeLists.txt">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

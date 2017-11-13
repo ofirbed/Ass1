@@ -9,6 +9,11 @@
 #include <iostream>
 #include <functional>
 #include <sstream>
+
+
+
+#include <iterator>
+
 using  namespace std;
 MkdirCommand::MkdirCommand(string args): BaseCommand(args){}
 
@@ -26,11 +31,17 @@ if(path.at(0)=='/') {//if start from root we do cd to root
 }
     std::replace(path.begin(), path.end(), '/', ' ');  // replace ':' by ' '
 
-    vector<string> array;//put the path into vector
+    /*vector<string> array;//put the path into vector
     stringstream ss(path);
     string temp;
     while (ss >> temp)
-        array.push_back(temp);
+        array.push_back(temp);*/
+
+    istringstream iss(path);
+
+    vector<string> array{istream_iterator<string>{iss},
+                         istream_iterator<string>{}};
+
     bool flag = false;//to know when we need to stop doing cd and start making directory
     for(int i=0;i<array.size();i++){
         if(!flag){
@@ -38,7 +49,7 @@ if(path.at(0)=='/') {//if start from root we do cd to root
                 flag= true;//from now need to create files
         }
         if(flag){
-            fs.getWorkingDirectory().getChildren().push_back(new Directory ((array.at(i)),&fs.getWorkingDirectory()));
+            fs.getWorkingDirectory().pushToChildren(new Directory (array[i],&fs.getRootDirectory()));
             fs.cdCommand(array.at(i));
         }
     }

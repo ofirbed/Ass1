@@ -11,32 +11,49 @@ LsCommand:: LsCommand(string args) : BaseCommand(args){};
 void LsCommand ::execute(FileSystem &fs) {
 
     string args(getArgs());
-    Directory &workingDirectory = fs.getWorkingDirectory();
+    Directory currDirectory = fs.getWorkingDirectory();
+    Directory *directoryToExplore= getDirectory(args, fs);
 
-    //check if sort by size or by name
-    if(args.substr(0,2).compare("-s ")==0) {
-        workingDirectory.sortBySize();
-        args = args.substr(3);
-    } else
-        workingDirectory.sortByName();
+    if(directoryToExplore != nullptr) {
+
+        //check if sort by size or by name
+        if (args.substr(0, 2).compare("-s ") == 0) {
+            (*directoryToExplore).sortBySize();
+            args = args.substr(3);
+        } else
+            (*directoryToExplore).sortByName();
 
 
-    if(args.compare("")==0 | args.compare(" ")==0) {                    //if there is no path input
-        vector<BaseFile *> files = workingDirectory.getChildren();      //get all children files
+        vector<BaseFile *> files = (*directoryToExplore).getChildren();      //get all children files
         for (signed int i = 0; i < files.size(); i++) {
             string fileDetails = getFileDetails(*files.at(i));
             std::cout << fileDetails << std::endl;
         }
-    }else                                                               //there is path
-    {
+    }
+    else
+        std::cout << "The path is not valid" << std::endl;
+
+    fs.cdCommand(currDirectory.getAbsolutePath());
 
 
+}
+
+Directory* LsCommand::getDirectory(string args, FileSystem &fs) {
+
+    if(args.substr(0,2).compare("-s ")==0)              //cut the "-s" if there is from the path
+        args.substr(3);
+
+    if((args.compare("")==0 | args.compare(" ")==0))      //if there is no path input
+        return &fs.getWorkingDirectory();
+
+    if(fs.cdCommand(args))
+        return &fs.getWorkingDirectory();
+    else
+        return nullptr;
 
     }
 
 
-
-}
 
 string LsCommand::toString() {}
 

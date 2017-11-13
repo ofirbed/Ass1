@@ -16,8 +16,10 @@ using namespace std;
 CdCommand::CdCommand(string args) :BaseCommand(args){}
 
 void CdCommand::execute(FileSystem &fs) {
+
+
     fs.cdCommand(getArgs());
-    string path = getArgs();
+   /*string path = getArgs();
     Directory *currDirectory = &fs.getWorkingDirectory();
     if (path.compare("..") == 0) {
         currDirectory = currDirectory->getParent();
@@ -60,6 +62,6 @@ void CdCommand::execute(FileSystem &fs) {
         if (currDirectory == NULL)
             std::cout << "not correct path";
     }
-    fs.setWorkingDirectory(currDirectory);
+    fs.setWorkingDirectory(currDirectory);*/
 }
 string CdCommand::toString() {}

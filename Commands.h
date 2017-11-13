@@ -40,6 +40,7 @@ public:
 	void execute(FileSystem & fs);
 	string toString();
 	string getFileDetails(BaseFile &file);
+	Directory* getDirectory(string args, FileSystem &fs);
 };
 
 class MkdirCommand : public BaseCommand {

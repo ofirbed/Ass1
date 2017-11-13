@@ -29,7 +29,7 @@ public:
 	File(string name, int size); // Constructor
 	int getSize(); // Return the size of the file
 
-    string getType();
+    virtual string getType();
 	
 };
 
@@ -53,9 +53,10 @@ public:
 	vector<BaseFile*> getChildren(); // Return children
 	int getSize(); // Return the size of the directory (recursively)
 	string getAbsolutePath();  //Return the path from the root to this
-    Directory* getChildByName(string name);
+    Directory* getDirChildByName(string name);
+	bool pushToChildren(BaseFile* file);
 
-    string getType();
+    virtual string getType();
 	
 };
 
