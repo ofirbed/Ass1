@@ -98,15 +98,20 @@ int Directory::getSize() {
 string Directory::getAbsolutePath() {
     if(parent==NULL)
         return "/";
-    return parent->getAbsolutePath()+"/"+getName();//write the absolute path recursively
-
+    return getAbsolutePathWithouRoot();
 
 }
-Directory* Directory::getChildByName(string name) {
+string Directory::getAbsolutePathWithouRoot() {
+    if(parent==NULL)
+        return "";
+    return parent->getAbsolutePath()+"/"+getName();//write the absolute path recursively
+}
+}
+BaseFile* Directory::getDirChildByName(string name) {
     for( int i=0;i<children.size();i++){
 
-        if(name.compare(children.at(i)->getName())==0&&children.at(i)->getType().compare("DIR")==0)
-            return (Directory*)children.at(i);
+        if(name.compare(children.at(i)->getName())==0)
+            return children.at(i);
         return NULL;
     }
 

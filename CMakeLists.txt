@@ -3,5 +3,5 @@ project(ass1)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp BaseFile.cpp File.cpp Directory.cpp Environment.cpp LsCommand.cpp BaseCommand.cpp Files.h FileSystem.cpp PwdCommand.cpp CdCommand.cpp Commands.h GlobalVariables.h Main.cpp MkdirCommand.cpp)
+set(SOURCE_FILES main.cpp BaseFile.cpp File.cpp Directory.cpp Environment.cpp LsCommand.cpp BaseCommand.cpp Files.h FileSystem.cpp PwdCommand.cpp CdCommand.cpp Commands.h GlobalVariables.h Main.cpp MkdirCommand.cpp MkfileCommand.cpp)
 add_executable(ass1 ${SOURCE_FILES} Environment.cpp LsCommand.cpp BaseCommand.cpp Files.h)

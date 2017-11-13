@@ -111,6 +111,8 @@ Commands.h
 /home/chaimbgu/Desktop/Ass1/Ass1/Main.cpp
 Environment.h
 /home/chaimbgu/Desktop/Ass1/Ass1/Environment.h
+iostream
+-
 
 /home/chaimbgu/Desktop/Ass1/Ass1/MkdirCommand.cpp
 Commands.h
@@ -124,6 +126,20 @@ algorithm
 array
 -
 iostream
+-
+functional
+-
+sstream
+-
+
+/home/chaimbgu/Desktop/Ass1/Ass1/MkfileCommand.cpp
+Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Commands.h
+iostream
+-
+algorithm
+-
+array
 -
 functional
 -
