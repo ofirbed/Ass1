@@ -38,6 +38,12 @@ string
 FileSystem.h
 /home/chaimbgu/Desktop/Ass1/Ass1/FileSystem.h
 
+/home/chaimbgu/Desktop/Ass1/Ass1/CpCommand.cpp
+Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/Commands.h
+iostream
+-
+
 /home/chaimbgu/Desktop/Ass1/Ass1/Directory.cpp
 algorithm
 -

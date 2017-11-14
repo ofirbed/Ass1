@@ -14,6 +14,11 @@ CMakeFiles/ass1.dir/CdCommand.cpp.o: ../Commands.h
 CMakeFiles/ass1.dir/CdCommand.cpp.o: ../FileSystem.h
 CMakeFiles/ass1.dir/CdCommand.cpp.o: ../Files.h
 
+CMakeFiles/ass1.dir/CpCommand.cpp.o: ../Commands.h
+CMakeFiles/ass1.dir/CpCommand.cpp.o: ../CpCommand.cpp
+CMakeFiles/ass1.dir/CpCommand.cpp.o: ../FileSystem.h
+CMakeFiles/ass1.dir/CpCommand.cpp.o: ../Files.h
+
 CMakeFiles/ass1.dir/Directory.cpp.o: ../Directory.cpp
 CMakeFiles/ass1.dir/Directory.cpp.o: ../Files.h
 

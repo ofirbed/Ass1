@@ -30,10 +30,12 @@ public:
 	File(string name, int size); // Constructor
     File(const File & other);//copy constructor
 	int getSize()const ; // Return the size of the file
-    virtual BaseFile* clone();
+    //virtual BaseFile* clone();
+    BaseFile* clone();
 
-    virtual string getType();
-	
+    //virtual string getType();
+    string getType();
+
 };
 
 class Directory : public BaseFile {
@@ -47,7 +49,7 @@ public:
 	Directory(string name, Directory *parent); // Constructor
     Directory (const Directory& other);
     Directory(Directory&&other);
-    virtual  BaseFile* clone();
+    BaseFile* clone();
 	Directory *getParent() const; // Return a pointer to the parent of this directory
 	void setParent(Directory *newParent); // Change the parent of this directory
 	void addFile(BaseFile* file); // Add the file to children
@@ -60,7 +62,6 @@ public:
 	string getAbsolutePath();  //Return the path from the root to this
     string getAbsolutePathWithouRoot();
     BaseFile* getDirChildByName(string name);
-
     virtual string getType();
 	
 };

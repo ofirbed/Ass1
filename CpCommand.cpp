@@ -3,9 +3,10 @@
 //
 
 #include "Commands.h"
+#include <iostream>
 using  namespace std;
 
-#include <iostream>
+
 
 CpCommand::CpCommand(string args) :BaseCommand(args){}//constructor
 
@@ -21,14 +22,15 @@ void CpCommand::execute(FileSystem &fs) {
     if (flag != 0)
         fs.setWorkingDirectory(currWorkingDirectory);
 
-    if (flag == 0){//the path not exist{
+    if (flag == 0) {//the path not exist{
         std::cout << "no such file or directory";
-    return;
-}
-    if(flag==1){
+        return;
+    }
+    if (flag == 1) {
 
     }
-
-
-
 }
+    string CpCommand::toString() {}
+
+
+

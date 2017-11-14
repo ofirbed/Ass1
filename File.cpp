@@ -14,7 +14,9 @@ File::File(const File &other):BaseFile(other.getName()){//copy constructor
 int File::getSize() const {return size;}
 
 BaseFile* File::clone() {
-    return new File(getName(),getSize());
+    //return new File(getName(),getSize());
+    //BaseFile *f = new File(getName(),getSize());
+   // return f;
 
 }
 

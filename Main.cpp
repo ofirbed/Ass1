@@ -7,16 +7,17 @@ unsigned int verbose = 0;
 int main(int , char **) {
 	//Environment env;
 	//env.start();
-	string path = "hi/gj/kdj/nv 1234";
-	int index= path.find_first_of(' ');
+	string path = "jj";
+	//int index= path.find_first_of(' ');
 
-	string a = path.substr(0,index-1);
-	string b = path.substr(index+1,9);
-	int fileSize = atoi(b.c_str());
-	std::cout << a + "jj"+b;
-	std::cout<<index;
-	std::cout<<path.size()-4;
+	//string a = path.substr(0,index-1);
+	//string b = path.substr(index+1,9);
+	//int fileSize = atoi(b.c_str());
+	//std::cout << a + "jj"+b;
+	//std::cout<<index;
+	//std::cout<<path.size()-4;
 
-	return 0;
-
+	//return 0;
+	path = path.substr(3);
+	std:: cout << path;
 }
