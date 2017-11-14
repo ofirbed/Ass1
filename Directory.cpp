@@ -86,7 +86,7 @@ void Directory::sortBySize() {
 }
 vector<BaseFile*> Directory::getChildren() {return children;}
 
-bool Directory ::pushToChildren(BaseFile * file) {
+void Directory ::pushToChildren(BaseFile * file) {
 
     children.push_back(file);
 }

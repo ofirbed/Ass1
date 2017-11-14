@@ -54,7 +54,7 @@ public:
 	int getSize(); // Return the size of the directory (recursively)
 	string getAbsolutePath();  //Return the path from the root to this
     Directory* getDirChildByName(string name);
-	bool pushToChildren(BaseFile* file);
+	void pushToChildren(BaseFile* file);
 
     virtual string getType();
 	

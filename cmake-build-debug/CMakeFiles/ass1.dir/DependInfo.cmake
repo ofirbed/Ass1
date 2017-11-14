@@ -14,7 +14,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ofirbed/Desktop/Ass1/LsCommand.cpp" "/home/ofirbed/Desktop/Ass1/cmake-build-debug/CMakeFiles/ass1.dir/LsCommand.cpp.o"
   "/home/ofirbed/Desktop/Ass1/Main.cpp" "/home/ofirbed/Desktop/Ass1/cmake-build-debug/CMakeFiles/ass1.dir/Main.cpp.o"
   "/home/ofirbed/Desktop/Ass1/MkdirCommand.cpp" "/home/ofirbed/Desktop/Ass1/cmake-build-debug/CMakeFiles/ass1.dir/MkdirCommand.cpp.o"
+  "/home/ofirbed/Desktop/Ass1/MvCommand.cpp" "/home/ofirbed/Desktop/Ass1/cmake-build-debug/CMakeFiles/ass1.dir/MvCommand.cpp.o"
   "/home/ofirbed/Desktop/Ass1/PwdCommand.cpp" "/home/ofirbed/Desktop/Ass1/cmake-build-debug/CMakeFiles/ass1.dir/PwdCommand.cpp.o"
+  "/home/ofirbed/Desktop/Ass1/RmCommand.cpp" "/home/ofirbed/Desktop/Ass1/cmake-build-debug/CMakeFiles/ass1.dir/RmCommand.cpp.o"
   "/home/ofirbed/Desktop/Ass1/main.cpp" "/home/ofirbed/Desktop/Ass1/cmake-build-debug/CMakeFiles/ass1.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -89,6 +89,7 @@ public:
 	RmCommand(string args);
 	void execute(FileSystem & fs);
 	string toString();
+	void DeleteBaseFile(BaseFile *baseFile,string pathOfParentDir,FileSystem &fs);
 };
 
 class HistoryCommand : public BaseCommand {

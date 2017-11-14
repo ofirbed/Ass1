@@ -129,7 +129,13 @@
 		<Unit filename="/home/ofirbed/Desktop/Ass1/MkdirCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/MvCommand.cpp">
+			<Option target="ass1"/>
+		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/PwdCommand.cpp">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/RmCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/main.cpp">

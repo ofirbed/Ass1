@@ -46,10 +46,20 @@ CMakeFiles/ass1.dir/MkdirCommand.cpp.o
  /home/ofirbed/Desktop/Ass1/FileSystem.h
  /home/ofirbed/Desktop/Ass1/Files.h
  /home/ofirbed/Desktop/Ass1/MkdirCommand.cpp
+CMakeFiles/ass1.dir/MvCommand.cpp.o
+ /home/ofirbed/Desktop/Ass1/Commands.h
+ /home/ofirbed/Desktop/Ass1/FileSystem.h
+ /home/ofirbed/Desktop/Ass1/Files.h
+ /home/ofirbed/Desktop/Ass1/MvCommand.cpp
 CMakeFiles/ass1.dir/PwdCommand.cpp.o
  /home/ofirbed/Desktop/Ass1/Commands.h
  /home/ofirbed/Desktop/Ass1/FileSystem.h
  /home/ofirbed/Desktop/Ass1/Files.h
  /home/ofirbed/Desktop/Ass1/PwdCommand.cpp
+CMakeFiles/ass1.dir/RmCommand.cpp.o
+ /home/ofirbed/Desktop/Ass1/Commands.h
+ /home/ofirbed/Desktop/Ass1/FileSystem.h
+ /home/ofirbed/Desktop/Ass1/Files.h
+ /home/ofirbed/Desktop/Ass1/RmCommand.cpp
 CMakeFiles/ass1.dir/main.cpp.o
  /home/ofirbed/Desktop/Ass1/main.cpp

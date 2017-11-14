@@ -134,7 +134,23 @@ sstream
 iterator
 -
 
+/home/ofirbed/Desktop/Ass1/MvCommand.cpp
+sstream
+-
+Commands.h
+/home/ofirbed/Desktop/Ass1/Commands.h
+iterator
+-
+iostream
+-
+
 /home/ofirbed/Desktop/Ass1/PwdCommand.cpp
+iostream
+-
+Commands.h
+/home/ofirbed/Desktop/Ass1/Commands.h
+
+/home/ofirbed/Desktop/Ass1/RmCommand.cpp
 iostream
 -
 Commands.h

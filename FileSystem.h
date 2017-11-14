@@ -14,6 +14,7 @@ public:
 	Directory& getWorkingDirectory() const; // Return reference to the working directory
 	void setWorkingDirectory(Directory *newWorkingDirectory); // Change the working directory of the file system
     bool cdCommand(string path);
+	BaseFile* getFileByPath(string path);
 
 };
 

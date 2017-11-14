@@ -64,25 +64,25 @@ void Environment ::start() {
                     } else {
                         if (array.at(0).compare("mkfile") == 0) {
 
-                            MkfileCommand mkfile(userInput.substr(7));
-                            mkfile.execute(fs);
+                            //MkfileCommand mkfile(userInput.substr(7));
+                            //mkfile.execute(fs);
 
                         } else {
                             if (array.at(0).compare("cp") == 0) {
 
-                                CpCommand cp(userInput.substr(3));
-                                cp.execute(fs);
+                                //CpCommand cp(userInput.substr(3));
+                                //cp.execute(fs);
 
                             } else {
                                 if (array.at(0).compare("mv") == 0) {
 
-                                    MvCommand mv(userInput.substr(3));
-                                    mv.execute(fs);
+                                    //MvCommand mv(userInput.substr(3));
+                                    //mv.execute(fs);
                                 } else {
                                     if (array.at(0).compare("rename") == 0) {
 
-                                        RenameCommand rename(userInput.substr(7));
-                                        rename.execute(fs);
+                                        //RenameCommand rename(userInput.substr(7));
+                                        //rename.execute(fs);
 
                                     } else {
                                         if (array.at(0).compare("rm") == 0) {

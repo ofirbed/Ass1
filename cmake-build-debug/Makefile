@@ -393,6 +393,33 @@ MkdirCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MkdirCommand.cpp.s
 .PHONY : MkdirCommand.cpp.s
 
+MvCommand.o: MvCommand.cpp.o
+
+.PHONY : MvCommand.o
+
+# target to build an object file
+MvCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MvCommand.cpp.o
+.PHONY : MvCommand.cpp.o
+
+MvCommand.i: MvCommand.cpp.i
+
+.PHONY : MvCommand.i
+
+# target to preprocess a source file
+MvCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MvCommand.cpp.i
+.PHONY : MvCommand.cpp.i
+
+MvCommand.s: MvCommand.cpp.s
+
+.PHONY : MvCommand.s
+
+# target to generate assembly for a file
+MvCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MvCommand.cpp.s
+.PHONY : MvCommand.cpp.s
+
 PwdCommand.o: PwdCommand.cpp.o
 
 .PHONY : PwdCommand.o
@@ -419,6 +446,33 @@ PwdCommand.s: PwdCommand.cpp.s
 PwdCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/PwdCommand.cpp.s
 .PHONY : PwdCommand.cpp.s
+
+RmCommand.o: RmCommand.cpp.o
+
+.PHONY : RmCommand.o
+
+# target to build an object file
+RmCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/RmCommand.cpp.o
+.PHONY : RmCommand.cpp.o
+
+RmCommand.i: RmCommand.cpp.i
+
+.PHONY : RmCommand.i
+
+# target to preprocess a source file
+RmCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/RmCommand.cpp.i
+.PHONY : RmCommand.cpp.i
+
+RmCommand.s: RmCommand.cpp.s
+
+.PHONY : RmCommand.s
+
+# target to generate assembly for a file
+RmCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/RmCommand.cpp.s
+.PHONY : RmCommand.cpp.s
 
 main.o: main.cpp.o
 
@@ -486,9 +540,15 @@ help:
 	@echo "... MkdirCommand.o"
 	@echo "... MkdirCommand.i"
 	@echo "... MkdirCommand.s"
+	@echo "... MvCommand.o"
+	@echo "... MvCommand.i"
+	@echo "... MvCommand.s"
 	@echo "... PwdCommand.o"
 	@echo "... PwdCommand.i"
 	@echo "... PwdCommand.s"
+	@echo "... RmCommand.o"
+	@echo "... RmCommand.i"
+	@echo "... RmCommand.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
