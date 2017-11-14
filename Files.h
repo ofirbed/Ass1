@@ -15,7 +15,7 @@ public:
 	string getName() const;
 	void setName(string newName);
 	virtual int getSize() = 0;
-
+	virtual BaseFile* clone()=0;
     virtual string getType() = 0;
 
 
@@ -28,8 +28,11 @@ private:
 public:
 	File(string name, int size); // Constructor
 	int getSize(); // Return the size of the file
-
+	BaseFile* clone();
     virtual string getType();
+
+	File(const File &other);
+
 	
 };
 
@@ -53,11 +56,16 @@ public:
 	vector<BaseFile*> getChildren(); // Return children
 	int getSize(); // Return the size of the directory (recursively)
 	string getAbsolutePath();  //Return the path from the root to this
-    Directory* getDirChildByName(string name);
+    BaseFile* getDirChildByName(string name);
 	void pushToChildren(BaseFile* file);
+    string getAbsolutePathWithouRoot();
 
     virtual string getType();
-	
+
+	Directory( const  Directory &other);
+	//Directory(Directory &&other);
+	BaseFile* clone();
+
 };
 
 #endif

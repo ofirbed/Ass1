@@ -13,4 +13,16 @@ void BaseFile::setName(string newName) {
     name = newName;
 }
 
+File::File(const File &other):BaseFile(other.getName()){//copy constructor
+    size = other.size;
+}
+
+
+BaseFile* File::clone() {
+    // return new File(getName(),getSize());
+    BaseFile *f = new File(getName(),getSize());
+    return f;
+
+}
+
 

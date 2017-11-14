@@ -38,7 +38,7 @@ void RmCommand::DeleteBaseFile(BaseFile *baseFile,string pathOfParentDir,FileSys
     if(baseFile->getType().compare("FILE")==0){     //the arg base file is a file and not dir
         //Directory *parent =(Directory*)fs.getFileByPath(pathOfParentDir);
         fs.cdCommand(pathOfParentDir);
-        fs.getWorkingDirectory().removeFile(baseFile);
+//        fs.getWorkingDirectory().removeFile(baseFile);
 
 
     }else{                                          //base file is a dir
@@ -48,7 +48,7 @@ void RmCommand::DeleteBaseFile(BaseFile *baseFile,string pathOfParentDir,FileSys
             BaseFile *child = (*dir).getChildren().at(i);
             DeleteBaseFile(child,dir->getAbsolutePath(),fs);
         }
-        dir->getParent()->removeFile(dir);
+     //   dir->getParent()->removeFile(dir);
 
     }
 

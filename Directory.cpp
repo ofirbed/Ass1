@@ -19,6 +19,35 @@ Directory::Directory(string name, Directory *parent) :BaseFile(name){
 //Directory* clone(){
   //  return new Directory(*this);
 //}
+
+
+
+Directory::Directory( const  Directory &other):BaseFile(other.getName()){//copy costructor
+    parent = other.parent;
+    for(int i=0;i<other.children.size();i++){
+        children.push_back(other.children.at(i)->clone());
+    }
+}
+/*Directory::Directory(Directory &&other):BaseFile(other.getName()),parent(other.getParent()) ,children(other.getChildren()){//move constructor
+
+    other.parent= NULL;
+    other.children=NULL;
+
+}*/
+
+
+BaseFile* Directory::clone() {
+    Directory* dir= new Directory(getName(),getParent());
+    for (int i=0;i<children.size();i++){
+        dir->children.push_back(children.at(i)->clone());
+    }
+    return dir;
+
+
+}
+
+
+
 Directory* Directory::getParent() const {return parent;}
 void Directory::setParent(Directory *newParent) {parent=newParent;}
 void Directory::addFile(BaseFile *file) {
@@ -100,7 +129,7 @@ int Directory::getSize() {
     return size;
 }
 
-string Directory::getAbsolutePath() {
+/*string Directory::getAbsolutePath() {
     if(parent==NULL)
         return "/";
     return parent->getAbsolutePath()+"/"+getName();//write the absolute path recursively
@@ -112,6 +141,31 @@ Directory* Directory::getDirChildByName(string name) {
 
         if(name.compare(children.at(i)->getName())==0&&children.at(i)->getType().compare("DIR")==0)
             return (Directory*)children.at(i);
+        return NULL;
+    }
+
+}*/
+
+
+
+string Directory::getAbsolutePath() {
+    if(parent==NULL)
+        return "/";
+    return getAbsolutePathWithouRoot();
+
+}
+
+string Directory::getAbsolutePathWithouRoot() {
+    if(parent==NULL)
+        return "";
+    return parent->getAbsolutePath()+"/"+getName();//write the absolute path recursively
+}
+
+BaseFile* Directory::getDirChildByName(string name) {
+    for( int i=0;i<children.size();i++){
+
+        if(name.compare(children.at(i)->getName())==0)
+            return children.at(i);
         return NULL;
     }
 
