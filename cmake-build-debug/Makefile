@@ -393,6 +393,33 @@ MkdirCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MkdirCommand.cpp.s
 .PHONY : MkdirCommand.cpp.s
 
+MkfileCommand.o: MkfileCommand.cpp.o
+
+.PHONY : MkfileCommand.o
+
+# target to build an object file
+MkfileCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MkfileCommand.cpp.o
+.PHONY : MkfileCommand.cpp.o
+
+MkfileCommand.i: MkfileCommand.cpp.i
+
+.PHONY : MkfileCommand.i
+
+# target to preprocess a source file
+MkfileCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MkfileCommand.cpp.i
+.PHONY : MkfileCommand.cpp.i
+
+MkfileCommand.s: MkfileCommand.cpp.s
+
+.PHONY : MkfileCommand.s
+
+# target to generate assembly for a file
+MkfileCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MkfileCommand.cpp.s
+.PHONY : MkfileCommand.cpp.s
+
 MvCommand.o: MvCommand.cpp.o
 
 .PHONY : MvCommand.o
@@ -540,6 +567,9 @@ help:
 	@echo "... MkdirCommand.o"
 	@echo "... MkdirCommand.i"
 	@echo "... MkdirCommand.s"
+	@echo "... MkfileCommand.o"
+	@echo "... MkfileCommand.i"
+	@echo "... MkfileCommand.s"
 	@echo "... MvCommand.o"
 	@echo "... MvCommand.i"
 	@echo "... MvCommand.s"

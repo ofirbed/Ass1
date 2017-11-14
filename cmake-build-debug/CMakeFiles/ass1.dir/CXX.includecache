@@ -134,6 +134,20 @@ sstream
 iterator
 -
 
+/home/ofirbed/Desktop/Ass1/MkfileCommand.cpp
+Commands.h
+/home/ofirbed/Desktop/Ass1/Commands.h
+iostream
+-
+algorithm
+-
+array
+-
+functional
+-
+sstream
+-
+
 /home/ofirbed/Desktop/Ass1/MvCommand.cpp
 sstream
 -

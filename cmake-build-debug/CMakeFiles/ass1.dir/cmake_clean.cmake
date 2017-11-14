@@ -13,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ass1.dir/MkdirCommand.cpp.o"
   "CMakeFiles/ass1.dir/MvCommand.cpp.o"
   "CMakeFiles/ass1.dir/RmCommand.cpp.o"
+  "CMakeFiles/ass1.dir/MkfileCommand.cpp.o"
   "ass1.pdb"
   "ass1"
 )
