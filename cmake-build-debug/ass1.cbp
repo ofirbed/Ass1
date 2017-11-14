@@ -96,6 +96,9 @@
 		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/Commands.h">
 			<Option target="ass1"/>
 		</Unit>
+		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/CpCommand.cpp">
+			<Option target="ass1"/>
+		</Unit>
 		<Unit filename="/home/chaimbgu/Desktop/Ass1/Ass1/Directory.cpp">
 			<Option target="ass1"/>
 		</Unit>

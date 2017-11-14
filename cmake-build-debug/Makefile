@@ -204,6 +204,33 @@ CdCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/CdCommand.cpp.s
 .PHONY : CdCommand.cpp.s
 
+CpCommand.o: CpCommand.cpp.o
+
+.PHONY : CpCommand.o
+
+# target to build an object file
+CpCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/CpCommand.cpp.o
+.PHONY : CpCommand.cpp.o
+
+CpCommand.i: CpCommand.cpp.i
+
+.PHONY : CpCommand.i
+
+# target to preprocess a source file
+CpCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/CpCommand.cpp.i
+.PHONY : CpCommand.cpp.i
+
+CpCommand.s: CpCommand.cpp.s
+
+.PHONY : CpCommand.s
+
+# target to generate assembly for a file
+CpCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/CpCommand.cpp.s
+.PHONY : CpCommand.cpp.s
+
 Directory.o: Directory.cpp.o
 
 .PHONY : Directory.o
@@ -492,6 +519,9 @@ help:
 	@echo "... CdCommand.o"
 	@echo "... CdCommand.i"
 	@echo "... CdCommand.s"
+	@echo "... CpCommand.o"
+	@echo "... CpCommand.i"
+	@echo "... CpCommand.s"
 	@echo "... Directory.o"
 	@echo "... Directory.i"
 	@echo "... Directory.s"

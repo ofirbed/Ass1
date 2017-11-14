@@ -4,13 +4,25 @@
 
 #include "Files.h"
 using namespace std;
-File::File(string name, int size): BaseFile(name){
+File::File(string name, int size): BaseFile(name){//constructor
     this->size=size;
 }
-int File::getSize() {return size;}
+File::File(const File &other):BaseFile(other.getName()){//copy constructor
+    size = other.getSize();
+}
+
+int File::getSize() const {return size;}
+
+BaseFile* File::clone() {
+    return new File(getName(),getSize());
+
+}
 
 string File::getType() {
     return "FILE";
 }
+
+
+
 
 

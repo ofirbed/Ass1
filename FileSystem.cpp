@@ -44,6 +44,15 @@ int FileSystem::cdCommand(string path) {//return 0 if no path like this 1 if the
                 return 0;
 
         }
+    bool flag = false;
+    while(!flag) {
+        if (path.substr(0, 2).compare("..") == 0) {
+            currDirectory = currDirectory->getParent();
+            if(currDirectory==NULL)
+                return 0;
+        }
+
+    }
         if (path.at(0)=='/'){// if start from root
             path = path.substr(1);
             std::replace(path.begin(), path.end(), '/', ' ');  // replace ':' by ' '

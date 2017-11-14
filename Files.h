@@ -12,10 +12,11 @@ private:
 	
 public:
 	BaseFile(string name);
+    BaseFile(const BaseFile&other);//copy constructor
 	string getName() const;
 	void setName(string newName);
 	virtual int getSize() = 0;
-
+    virtual BaseFile* clone()=0;
     virtual string getType() = 0;
 
 
@@ -27,7 +28,9 @@ private:
 		
 public:
 	File(string name, int size); // Constructor
-	int getSize(); // Return the size of the file
+    File(const File & other);//copy constructor
+	int getSize()const ; // Return the size of the file
+    virtual BaseFile* clone();
 
     virtual string getType();
 	
@@ -42,7 +45,9 @@ private:
 
 public:
 	Directory(string name, Directory *parent); // Constructor
-	Directory (const Directory* other);
+    Directory (const Directory& other);
+    Directory(Directory&&other);
+    virtual  BaseFile* clone();
 	Directory *getParent() const; // Return a pointer to the parent of this directory
 	void setParent(Directory *newParent); // Change the parent of this directory
 	void addFile(BaseFile* file); // Add the file to children
@@ -50,8 +55,8 @@ public:
 	void removeFile(BaseFile* file); // Remove the file from children
 	void sortByName(); // Sort children by name alphabetically (not recursively)
 	void sortBySize(); // Sort children by size (not recursively)
-	vector<BaseFile*> getChildren(); // Return children
-	int getSize(); // Return the size of the directory (recursively)
+	vector<BaseFile*> getChildren()const ; // Return children
+	int getSize()const; // Return the size of the directory (recursively)
 	string getAbsolutePath();  //Return the path from the root to this
     string getAbsolutePathWithouRoot();
     BaseFile* getDirChildByName(string name);

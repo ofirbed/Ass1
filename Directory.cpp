@@ -8,6 +8,31 @@ using namespace std;
 Directory::Directory(string name, Directory *parent) :BaseFile(name){
     this->parent=parent;
 }
+Directory::Directory( const  Directory &other):BaseFile(other.getName()){//copy costructor
+    parent = other.parent;
+    for(int i=0;i<other.children.size();i++){
+            children.push_back(other.children.at(i)->clone());
+        }
+    }
+Directory::Directory(Directory &&other):BaseFile(other.getName()),parent(other.getParent()) ,children(other.getChildren()){//move constructor
+
+    other.parent= NULL;
+    other.children=NULL;
+
+}
+
+
+
+
+BaseFile* Directory::clone() {
+    Directory* dir= new Directory(getName(),getParent());
+    for (int i=0;i<children.size();i++){
+        dir->children.push_back(children.at(i)->clone());
+    }
+    return dir;
+
+
+}
 //Directory::Directory (const Directory* other):BaseFile(other->getName()){
 
 //}
@@ -84,10 +109,10 @@ void Directory::sortBySize() {
         size--;
     }
 }
-vector<BaseFile*> Directory::getChildren() {return children;}
+vector<BaseFile*> Directory::getChildren() const {return children;}
 
 
-int Directory::getSize() {
+int Directory::getSize() const{
     int size = 0;
     for (int i = 0; i < children.size(); i++) {
         size = size + children.at(i)->getSize();
@@ -106,7 +131,7 @@ string Directory::getAbsolutePathWithouRoot() {
         return "";
     return parent->getAbsolutePath()+"/"+getName();//write the absolute path recursively
 }
-}
+
 BaseFile* Directory::getDirChildByName(string name) {
     for( int i=0;i<children.size();i++){
 

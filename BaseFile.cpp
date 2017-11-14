@@ -7,6 +7,8 @@ using namespace std;
 BaseFile::BaseFile(string name):name(name) {
 
 }
+BaseFile::BaseFile(const BaseFile &other):name(other.getName()) {}//copy constructor
+
 string BaseFile::getName() const {return name;}
 
 void BaseFile::setName(string newName) {
