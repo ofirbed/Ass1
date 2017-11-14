@@ -37,13 +37,14 @@ void FileSystem::setWorkingDirectory(Directory *newWorkingDirectory) {
 //get path and return the file(last name at the path)
 BaseFile* FileSystem::getFileByPath(string path) {
 
-    /*std::size_t found = path.find_last_of("/\\");
+    std::size_t found = path.find_last_of("/\\");
     string parentPath = path.substr(0,found);
     string nameOfFileOrDir =  path.substr(found+1);
 
     Directory currDirectory = getWorkingDirectory();
 
-    if(cdCommand(parentPath)==2){
+    if(cdCommand(path)==2){
+        cdCommand(parentPath);
         BaseFile* output = getWorkingDirectory().getDirChildByName(nameOfFileOrDir);
         if(output!=NULL) {
             cdCommand(currDirectory.getAbsolutePath());
@@ -51,14 +52,15 @@ BaseFile* FileSystem::getFileByPath(string path) {
         }
 
     }
-    if(cdCommand(parentPath)==1){
+    if(cdCommand(path)==1){
         BaseFile output = getWorkingDirectory();
         cdCommand(currDirectory.getAbsolutePath());
         return &output;
 
     }
+
     cdCommand(currDirectory.getAbsolutePath());
-    return nullptr ;*/
+    return nullptr ;
 
 }
 
