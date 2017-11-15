@@ -11,8 +11,8 @@ PwdCommand::PwdCommand(string args) : BaseCommand(args){};
 
 void PwdCommand::execute(FileSystem &fs) {
 
-    Directory workingDirectory = fs.getWorkingDirectory();
-    std:: cout << workingDirectory.getName()<< std::endl;
+    Directory *workingDirectory = &fs.getWorkingDirectory();
+    std:: cout << workingDirectory->getName()<< std::endl;
 
 }
 

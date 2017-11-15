@@ -17,6 +17,8 @@ public:
 	virtual int getSize() = 0;
 	virtual BaseFile* clone()=0;
     virtual string getType() = 0;
+    virtual  ~BaseFile();
+
 
 
 };
@@ -32,6 +34,8 @@ public:
     virtual string getType();
 
 	File(const File &other);
+
+
 
 	
 };
@@ -65,7 +69,9 @@ public:
 	Directory( const  Directory &other);
 	//Directory(Directory &&other);
 	BaseFile* clone();
-
+	~Directory();
+	void clear();
+	void removeDir(string name);		//remove dir by name
 };
 
 #endif

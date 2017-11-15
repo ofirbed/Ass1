@@ -20,7 +20,26 @@ Directory::Directory(string name, Directory *parent) :BaseFile(name){
   //  return new Directory(*this);
 //}
 
+Directory::~Directory() {
 
+    clear();
+}
+
+void Directory::clear() {
+
+    for (int i = 0; i < getChildren().size(); i++) {
+        BaseFile *child = getChildren().at(i);
+        if (child->getType().compare("FILE") == 0) {     //if the basefile is a file
+            removeFile(child->getName());
+        } else {
+            children.erase(children.begin()+i);
+            delete (child);
+        }
+
+    }
+
+    //delete (children);
+}
 
 Directory::Directory( const  Directory &other):BaseFile(other.getName()){//copy costructor
     parent = other.parent;
@@ -58,7 +77,23 @@ void Directory::addFile(BaseFile *file) {
 void Directory::removeFile(string name) {
     int counter(0);
     for(BaseFile* file : children){
-        if(file->getName().compare(name)==0){
+        if(file->getName().compare(name)==0 && file->getType().compare("FILE")==0){
+            File *file = (File*)(children.at(counter));
+            delete (file);
+            children.erase(children.begin()+counter);
+        }
+        counter++;
+    }
+
+}
+
+
+void Directory::removeDir(string name) {
+    int counter(0);
+    for(BaseFile* file : children){
+        if(file->getName().compare(name)==0 && file->getType().compare("DIR")==0){
+            //Directory *dir = (Directory*)(children.at(counter));
+            delete file;
             children.erase(children.begin()+counter);
         }
         counter++;
@@ -81,16 +116,24 @@ void Directory::sortByName() {
              minDirectory = children.at(i);
          }
      }
-     removeFile(minName);
+
+
+     int counter(0);
+     for(BaseFile* file : children){
+         if(file->getName().compare(minName)==0){
+             children.erase(children.begin()+counter);
+         }
+         counter++;
+     }
      children.push_back(minDirectory);
      size--;
  }
 }
 void Directory::sortBySize() {
-    if(children.size()==0)
+    if (children.size() == 0)
         return;
     int size = children.size();
-    while(size>0) {
+    while (size > 0) {
         int minSize = children.at(0)->getSize();
         BaseFile *minDirectory = children.at(0);
 
@@ -99,20 +142,27 @@ void Directory::sortBySize() {
             if (currSize < minSize) {//check by size
                 minSize = currSize;
                 minDirectory = children.at(i);
-            }
-            else if(currSize = minSize){//if size equal check by name
-                if(children.at(i)->getName().compare(minDirectory->getName())<0){
+            } else if (currSize = minSize) {//if size equal check by name
+                if (children.at(i)->getName().compare(minDirectory->getName()) < 0) {
                     minSize = currSize;
-                    minDirectory= children.at(i);
+                    minDirectory = children.at(i);
                 }
 
             }
         }
-        removeFile(minDirectory->getName());//remove the min from the vector and then add it to the enf of the list
+        //remove the min from the vector and then add it to the enf of the list
+        int counter(0);
+        for (BaseFile *file : children) {
+            if (file->getName().compare(minDirectory->getName()) == 0) {
+                children.erase(children.begin() + counter);
+            }
+            counter++;
+        }
         children.push_back(minDirectory);
         size--;
     }
 }
+
 vector<BaseFile*> Directory::getChildren() {return children;}
 
 void Directory ::pushToChildren(BaseFile * file) {
@@ -158,7 +208,7 @@ string Directory::getAbsolutePath() {
 string Directory::getAbsolutePathWithouRoot() {
     if(parent==NULL)
         return "";
-    return parent->getAbsolutePath()+"/"+getName();//write the absolute path recursively
+    return parent->getAbsolutePathWithouRoot()+"/"+getName();//write the absolute path recursively
 }
 
 BaseFile* Directory::getDirChildByName(string name) {
@@ -166,8 +216,9 @@ BaseFile* Directory::getDirChildByName(string name) {
 
         if(name.compare(children.at(i)->getName())==0)
             return children.at(i);
-        return NULL;
+
     }
+    return NULL;
 
 }
 

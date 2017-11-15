@@ -52,9 +52,14 @@ void Environment ::start() {
                 }
             } else {
                 if (array.at(0).compare("ls") == 0) {
-
-                    LsCommand cd(userInput.substr(3));
+                    int charToSend=0;
+                    if (array.size() == 1)
+                        charToSend=2;
+                    else
+                        charToSend=3;
+                    LsCommand cd(userInput.substr(charToSend));
                     cd.execute(fs);
+
                 } else {
                     if (array.at(0).compare("mkdir") == 0) {
 
@@ -64,8 +69,8 @@ void Environment ::start() {
                     } else {
                         if (array.at(0).compare("mkfile") == 0) {
 
-                            //MkfileCommand mkfile(userInput.substr(7));
-                            //mkfile.execute(fs);
+                            MkfileCommand mkfile(userInput.substr(7));
+                            mkfile.execute(fs);
 
                         } else {
                             if (array.at(0).compare("cp") == 0) {
@@ -89,6 +94,9 @@ void Environment ::start() {
 
                                             RmCommand rm(userInput.substr(3));
                                             rm.execute(fs);
+
+                                        }else{
+                                            std::cout << "There is no such command!" << std::endl;
 
                                         }
                                     }

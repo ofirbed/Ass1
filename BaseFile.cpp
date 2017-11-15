@@ -26,3 +26,6 @@ BaseFile* File::clone() {
 }
 
 
+BaseFile::~BaseFile() {}
+
+

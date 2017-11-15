@@ -41,25 +41,25 @@ BaseFile* FileSystem::getFileByPath(string path) {
     string parentPath = path.substr(0,found);
     string nameOfFileOrDir =  path.substr(found+1);
 
-    Directory currDirectory = getWorkingDirectory();
+    Directory *currDirectory = &getWorkingDirectory();
 
     if(cdCommand(path)==2){
         cdCommand(parentPath);
         BaseFile* output = getWorkingDirectory().getDirChildByName(nameOfFileOrDir);
         if(output!=NULL) {
-            cdCommand(currDirectory.getAbsolutePath());
+            cdCommand(currDirectory->getAbsolutePath());
             return output;
         }
 
     }
     if(cdCommand(path)==1){
-        BaseFile output = getWorkingDirectory();
-        cdCommand(currDirectory.getAbsolutePath());
-        return &output;
+        Directory *output = &getWorkingDirectory();
+        cdCommand(currDirectory->getAbsolutePath());
+        return output;
 
     }
 
-    cdCommand(currDirectory.getAbsolutePath());
+    cdCommand(currDirectory->getAbsolutePath());
     return nullptr ;
 
 }
@@ -160,10 +160,10 @@ int FileSystem::cdCommand(string path) {//return 0 if no path like this 1 if the
         currDirectory = rootDirectory;
         for(signed int i =0;i<array.size();i++){
             BaseFile*  child= currDirectory->getDirChildByName(array.at(i));
-            if(child->getType().compare("DIR")==0)
+            if(child !=NULL && child->getType().compare("DIR")==0)
                 currDirectory=(Directory*)child;
                 //currDirectory = currDirectory->getDirChildByName(array.at(i));
-            else if (currDirectory == NULL|i<array.size()-1)
+            else if (child == NULL||( i<array.size()-1 ) & child->getType().compare("FILE")==0)
                 return 0;
 
             else
@@ -185,10 +185,10 @@ int FileSystem::cdCommand(string path) {//return 0 if no path like this 1 if the
     currDirectory = workingDirectory;
     for (signed int i = 0; i < array.size(); i++) {
         BaseFile*  child= currDirectory->getDirChildByName(array.at(i));
-        if(child->getType().compare("DIR")==0)
+        if(child !=NULL && child->getType().compare("DIR")==0)
             //currDirectory = currDirectory->getDirChildByName(array.at(i));
             currDirectory=(Directory*)child;
-        else if (currDirectory == NULL|i<array.size()-1)
+        else if (child == NULL||( i<array.size()-1 ) & child->getType().compare("FILE")==0)
             return 0;
 
         else
