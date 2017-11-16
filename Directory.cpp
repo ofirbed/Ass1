@@ -101,6 +101,20 @@ void Directory::removeDir(string name) {
 
 }
 
+
+
+void Directory::removeFromChildrenDirOrFile(string name) {
+    int counter(0);
+    for(BaseFile* file : children){
+        if(file->getName().compare(name)==0 && file->getType().compare("DIR")==0){
+            children.erase(children.begin()+counter);
+        }
+        counter++;
+    }
+
+}
+
+
 void Directory::sortByName() {
  if(children.size()==0)
      return;

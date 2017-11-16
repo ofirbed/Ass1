@@ -81,8 +81,8 @@ void Environment ::start() {
                             } else {
                                 if (array.at(0).compare("mv") == 0) {
 
-                                    //MvCommand mv(userInput.substr(3));
-                                    //mv.execute(fs);
+                                    MvCommand mv(userInput.substr(3));
+                                    mv.execute(fs);
                                 } else {
                                     if (array.at(0).compare("rename") == 0) {
 
