@@ -55,7 +55,10 @@ Directory* LsCommand::getDirectory(string args, FileSystem &fs) {
 
 
 
-string LsCommand::toString() {}
+string LsCommand::toString() {
+
+    return "ls";
+}
 
 
 //get file detail: TYPE   NAME    SIZE

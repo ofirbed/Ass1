@@ -38,6 +38,12 @@ string
 FileSystem.h
 /home/ofirbed/Desktop/Ass1/FileSystem.h
 
+/home/ofirbed/Desktop/Ass1/CpCommand.cpp
+Commands.h
+/home/ofirbed/Desktop/Ass1/Commands.h
+iostream
+-
+
 /home/ofirbed/Desktop/Ass1/Directory.cpp
 algorithm
 -
@@ -69,6 +75,12 @@ string
 -
 vector
 -
+
+/home/ofirbed/Desktop/Ass1/ErrorCommand.cpp
+iostream
+-
+Commands.h
+/home/ofirbed/Desktop/Ass1/Commands.h
 
 /home/ofirbed/Desktop/Ass1/File.cpp
 Files.h
@@ -103,6 +115,12 @@ string
 -
 vector
 -
+
+/home/ofirbed/Desktop/Ass1/HistoryCommand.cpp
+iostream
+-
+Commands.h
+/home/ofirbed/Desktop/Ass1/Commands.h
 
 /home/ofirbed/Desktop/Ass1/LsCommand.cpp
 iostream
@@ -163,6 +181,12 @@ iostream
 -
 Commands.h
 /home/ofirbed/Desktop/Ass1/Commands.h
+
+/home/ofirbed/Desktop/Ass1/RenameCommand.cpp
+Commands.h
+/home/ofirbed/Desktop/Ass1/Commands.h
+iostream
+-
 
 /home/ofirbed/Desktop/Ass1/RmCommand.cpp
 iostream

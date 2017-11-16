@@ -20,14 +20,20 @@ void MkfileCommand::execute(FileSystem &fs) {
     string path = pathAndSize.substr(0,index);//only path
     int fileSize = atoi(strSize.c_str());//convert to int
     Directory* workingDirectory = &fs.getWorkingDirectory();
-    if(fs.cdCommand(path)==1){
-        "file already exist";
+    if(fs.cdCommand(path)!=0){
+        std::cout<<"file already exist \n" ;
         fs.setWorkingDirectory(workingDirectory);
         return;
     }
     index = path.find_last_of('/');
     string fileName= path.substr(index+1);
-    path=path.substr(0,index);
+    if(index ==-1) {
+        fileName = path;
+        path = fs.getWorkingDirectory().getAbsolutePath();
+
+    }
+    else
+        path=path.substr(0,index);
     if(fs.cdCommand(path)==0) {
         "the system cannot fint the path specified";
         fs.setWorkingDirectory(workingDirectory);
@@ -40,6 +46,8 @@ void MkfileCommand::execute(FileSystem &fs) {
 
 
 }
-string MkfileCommand::toString() {}
+string MkfileCommand::toString() {
+    return "mkfile";
+}
 
 

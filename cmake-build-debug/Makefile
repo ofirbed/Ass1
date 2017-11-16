@@ -204,6 +204,33 @@ CdCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/CdCommand.cpp.s
 .PHONY : CdCommand.cpp.s
 
+CpCommand.o: CpCommand.cpp.o
+
+.PHONY : CpCommand.o
+
+# target to build an object file
+CpCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/CpCommand.cpp.o
+.PHONY : CpCommand.cpp.o
+
+CpCommand.i: CpCommand.cpp.i
+
+.PHONY : CpCommand.i
+
+# target to preprocess a source file
+CpCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/CpCommand.cpp.i
+.PHONY : CpCommand.cpp.i
+
+CpCommand.s: CpCommand.cpp.s
+
+.PHONY : CpCommand.s
+
+# target to generate assembly for a file
+CpCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/CpCommand.cpp.s
+.PHONY : CpCommand.cpp.s
+
 Directory.o: Directory.cpp.o
 
 .PHONY : Directory.o
@@ -258,6 +285,33 @@ Environment.cpp.s:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/Environment.cpp.s
 .PHONY : Environment.cpp.s
 
+ErrorCommand.o: ErrorCommand.cpp.o
+
+.PHONY : ErrorCommand.o
+
+# target to build an object file
+ErrorCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/ErrorCommand.cpp.o
+.PHONY : ErrorCommand.cpp.o
+
+ErrorCommand.i: ErrorCommand.cpp.i
+
+.PHONY : ErrorCommand.i
+
+# target to preprocess a source file
+ErrorCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/ErrorCommand.cpp.i
+.PHONY : ErrorCommand.cpp.i
+
+ErrorCommand.s: ErrorCommand.cpp.s
+
+.PHONY : ErrorCommand.s
+
+# target to generate assembly for a file
+ErrorCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/ErrorCommand.cpp.s
+.PHONY : ErrorCommand.cpp.s
+
 File.o: File.cpp.o
 
 .PHONY : File.o
@@ -311,6 +365,33 @@ FileSystem.s: FileSystem.cpp.s
 FileSystem.cpp.s:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/FileSystem.cpp.s
 .PHONY : FileSystem.cpp.s
+
+HistoryCommand.o: HistoryCommand.cpp.o
+
+.PHONY : HistoryCommand.o
+
+# target to build an object file
+HistoryCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/HistoryCommand.cpp.o
+.PHONY : HistoryCommand.cpp.o
+
+HistoryCommand.i: HistoryCommand.cpp.i
+
+.PHONY : HistoryCommand.i
+
+# target to preprocess a source file
+HistoryCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/HistoryCommand.cpp.i
+.PHONY : HistoryCommand.cpp.i
+
+HistoryCommand.s: HistoryCommand.cpp.s
+
+.PHONY : HistoryCommand.s
+
+# target to generate assembly for a file
+HistoryCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/HistoryCommand.cpp.s
+.PHONY : HistoryCommand.cpp.s
 
 LsCommand.o: LsCommand.cpp.o
 
@@ -474,6 +555,33 @@ PwdCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/PwdCommand.cpp.s
 .PHONY : PwdCommand.cpp.s
 
+RenameCommand.o: RenameCommand.cpp.o
+
+.PHONY : RenameCommand.o
+
+# target to build an object file
+RenameCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/RenameCommand.cpp.o
+.PHONY : RenameCommand.cpp.o
+
+RenameCommand.i: RenameCommand.cpp.i
+
+.PHONY : RenameCommand.i
+
+# target to preprocess a source file
+RenameCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/RenameCommand.cpp.i
+.PHONY : RenameCommand.cpp.i
+
+RenameCommand.s: RenameCommand.cpp.s
+
+.PHONY : RenameCommand.s
+
+# target to generate assembly for a file
+RenameCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/RenameCommand.cpp.s
+.PHONY : RenameCommand.cpp.s
+
 RmCommand.o: RmCommand.cpp.o
 
 .PHONY : RmCommand.o
@@ -546,18 +654,27 @@ help:
 	@echo "... CdCommand.o"
 	@echo "... CdCommand.i"
 	@echo "... CdCommand.s"
+	@echo "... CpCommand.o"
+	@echo "... CpCommand.i"
+	@echo "... CpCommand.s"
 	@echo "... Directory.o"
 	@echo "... Directory.i"
 	@echo "... Directory.s"
 	@echo "... Environment.o"
 	@echo "... Environment.i"
 	@echo "... Environment.s"
+	@echo "... ErrorCommand.o"
+	@echo "... ErrorCommand.i"
+	@echo "... ErrorCommand.s"
 	@echo "... File.o"
 	@echo "... File.i"
 	@echo "... File.s"
 	@echo "... FileSystem.o"
 	@echo "... FileSystem.i"
 	@echo "... FileSystem.s"
+	@echo "... HistoryCommand.o"
+	@echo "... HistoryCommand.i"
+	@echo "... HistoryCommand.s"
 	@echo "... LsCommand.o"
 	@echo "... LsCommand.i"
 	@echo "... LsCommand.s"
@@ -576,6 +693,9 @@ help:
 	@echo "... PwdCommand.o"
 	@echo "... PwdCommand.i"
 	@echo "... PwdCommand.s"
+	@echo "... RenameCommand.o"
+	@echo "... RenameCommand.i"
+	@echo "... RenameCommand.s"
 	@echo "... RmCommand.o"
 	@echo "... RmCommand.i"
 	@echo "... RmCommand.s"

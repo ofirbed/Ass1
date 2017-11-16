@@ -58,4 +58,6 @@ if(path.at(0)=='/') {//if start from root we do cd to root
 
 
 }
-string MkdirCommand::toString() {};
+string MkdirCommand::toString() {
+    return  "mkdir";
+};

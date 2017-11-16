@@ -64,4 +64,7 @@ void CdCommand::execute(FileSystem &fs) {
     }
     fs.setWorkingDirectory(currDirectory);*/
 }
-string CdCommand::toString() {}
+string CdCommand::toString() {
+
+    return "cd";
+}

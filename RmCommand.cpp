@@ -15,13 +15,17 @@ void RmCommand::execute(FileSystem &fs) {
     if(path.compare("/")==0 | path.compare(fs.getWorkingDirectory().getAbsolutePath())==0)      //if it root or working directory
         std::cout << "Can’t remove directory" << std::endl;
     else {
+
+        if(path.at(0)!='/' & path.at(0)!='.' & path.at(1)!='.')                                  //if the path is just file name, convert it to real path
+            path=currDirectory->getAbsolutePathWithouRoot()+"/"+path;
+
         int argType = fs.cdCommand(path);
 
         if (argType == 0) {                                                 //there is no file or dir
             std::cout << "No such file or directory" << std::endl;
         } else {
-            if(argType== 2 | path.at(0)!='/')
-                path=currDirectory->getAbsolutePathWithouRoot()+"/"+path;
+           // if(argType== 2 | path.at(0)!='/')
+            //    path=currDirectory->getAbsolutePathWithouRoot()+"/"+path;
 
             BaseFile *file = fs.getFileByPath(path);
             size_t found = path.find_last_of("/\\");
@@ -64,4 +68,6 @@ void RmCommand::DeleteBaseFile(BaseFile *baseFile,string pathOfParentDir,FileSys
     }
 }
 
-string RmCommand::toString() {}
+string RmCommand::toString() {
+    return "rm";
+}

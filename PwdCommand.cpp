@@ -16,7 +16,9 @@ void PwdCommand::execute(FileSystem &fs) {
 
 }
 
-string PwdCommand::toString() {}
+string PwdCommand::toString() {
+    return "pwd";
+}
 
 
 

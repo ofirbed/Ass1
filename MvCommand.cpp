@@ -28,6 +28,9 @@ void MvCommand::execute(FileSystem &fs) {
         if(source.at(0)!='/')                                  //if the source is just file name, convert it to path
             source=currDirectory->getAbsolutePathWithouRoot()+"/"+source;
 
+        if(destination.at(0)!='/')                                  //if the source is just file name, convert it to path
+            destination=currDirectory->getAbsolutePathWithouRoot()+"/"+destination;
+
         BaseFile *sourceFileOrDir = fs.getFileByPath(source);
         BaseFile *destinationDir = fs.getFileByPath(destination);
 
@@ -69,4 +72,6 @@ void MvCommand::execute(FileSystem &fs) {
     fs.cdCommand(currDirectory->getAbsolutePath());
 };
 
-string MvCommand ::toString() {};
+string MvCommand ::toString() {
+    return "mv";
+};

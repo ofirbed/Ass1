@@ -14,6 +14,11 @@ CMakeFiles/ass1.dir/CdCommand.cpp.o: ../Commands.h
 CMakeFiles/ass1.dir/CdCommand.cpp.o: ../FileSystem.h
 CMakeFiles/ass1.dir/CdCommand.cpp.o: ../Files.h
 
+CMakeFiles/ass1.dir/CpCommand.cpp.o: ../Commands.h
+CMakeFiles/ass1.dir/CpCommand.cpp.o: ../CpCommand.cpp
+CMakeFiles/ass1.dir/CpCommand.cpp.o: ../FileSystem.h
+CMakeFiles/ass1.dir/CpCommand.cpp.o: ../Files.h
+
 CMakeFiles/ass1.dir/Directory.cpp.o: ../Directory.cpp
 CMakeFiles/ass1.dir/Directory.cpp.o: ../Files.h
 
@@ -23,12 +28,22 @@ CMakeFiles/ass1.dir/Environment.cpp.o: ../Environment.h
 CMakeFiles/ass1.dir/Environment.cpp.o: ../FileSystem.h
 CMakeFiles/ass1.dir/Environment.cpp.o: ../Files.h
 
+CMakeFiles/ass1.dir/ErrorCommand.cpp.o: ../Commands.h
+CMakeFiles/ass1.dir/ErrorCommand.cpp.o: ../ErrorCommand.cpp
+CMakeFiles/ass1.dir/ErrorCommand.cpp.o: ../FileSystem.h
+CMakeFiles/ass1.dir/ErrorCommand.cpp.o: ../Files.h
+
 CMakeFiles/ass1.dir/File.cpp.o: ../File.cpp
 CMakeFiles/ass1.dir/File.cpp.o: ../Files.h
 
 CMakeFiles/ass1.dir/FileSystem.cpp.o: ../FileSystem.cpp
 CMakeFiles/ass1.dir/FileSystem.cpp.o: ../FileSystem.h
 CMakeFiles/ass1.dir/FileSystem.cpp.o: ../Files.h
+
+CMakeFiles/ass1.dir/HistoryCommand.cpp.o: ../Commands.h
+CMakeFiles/ass1.dir/HistoryCommand.cpp.o: ../FileSystem.h
+CMakeFiles/ass1.dir/HistoryCommand.cpp.o: ../Files.h
+CMakeFiles/ass1.dir/HistoryCommand.cpp.o: ../HistoryCommand.cpp
 
 CMakeFiles/ass1.dir/LsCommand.cpp.o: ../Commands.h
 CMakeFiles/ass1.dir/LsCommand.cpp.o: ../FileSystem.h
@@ -60,6 +75,11 @@ CMakeFiles/ass1.dir/PwdCommand.cpp.o: ../Commands.h
 CMakeFiles/ass1.dir/PwdCommand.cpp.o: ../FileSystem.h
 CMakeFiles/ass1.dir/PwdCommand.cpp.o: ../Files.h
 CMakeFiles/ass1.dir/PwdCommand.cpp.o: ../PwdCommand.cpp
+
+CMakeFiles/ass1.dir/RenameCommand.cpp.o: ../Commands.h
+CMakeFiles/ass1.dir/RenameCommand.cpp.o: ../FileSystem.h
+CMakeFiles/ass1.dir/RenameCommand.cpp.o: ../Files.h
+CMakeFiles/ass1.dir/RenameCommand.cpp.o: ../RenameCommand.cpp
 
 CMakeFiles/ass1.dir/RmCommand.cpp.o: ../Commands.h
 CMakeFiles/ass1.dir/RmCommand.cpp.o: ../FileSystem.h

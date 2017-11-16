@@ -96,6 +96,9 @@
 		<Unit filename="/home/ofirbed/Desktop/Ass1/Commands.h">
 			<Option target="ass1"/>
 		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/CpCommand.cpp">
+			<Option target="ass1"/>
+		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/Directory.cpp">
 			<Option target="ass1"/>
 		</Unit>
@@ -103,6 +106,9 @@
 			<Option target="ass1"/>
 		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/Environment.h">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/ErrorCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/File.cpp">
@@ -118,6 +124,9 @@
 			<Option target="ass1"/>
 		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/GlobalVariables.h">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/HistoryCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/LsCommand.cpp">
@@ -136,6 +145,9 @@
 			<Option target="ass1"/>
 		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/PwdCommand.cpp">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ofirbed/Desktop/Ass1/RenameCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/RmCommand.cpp">

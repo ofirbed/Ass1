@@ -106,7 +106,7 @@ void Directory::removeDir(string name) {
 void Directory::removeFromChildrenDirOrFile(string name) {
     int counter(0);
     for(BaseFile* file : children){
-        if(file->getName().compare(name)==0 && file->getType().compare("DIR")==0){
+        if(file->getName().compare(name)==0){
             children.erase(children.begin()+counter);
         }
         counter++;
@@ -157,7 +157,7 @@ void Directory::sortBySize() {
             if (currSize < minSize) {//check by size
                 minSize = currSize;
                 minDirectory = children.at(i);
-            } else if (currSize = minSize) {//if size equal check by name
+            } else if (currSize == minSize) {//if size equal check by name
                 if (children.at(i)->getName().compare(minDirectory->getName()) < 0) {
                     minSize = currSize;
                     minDirectory = children.at(i);

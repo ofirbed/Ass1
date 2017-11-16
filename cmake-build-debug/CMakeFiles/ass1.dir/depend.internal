@@ -14,6 +14,11 @@ CMakeFiles/ass1.dir/CdCommand.cpp.o
  /home/ofirbed/Desktop/Ass1/Commands.h
  /home/ofirbed/Desktop/Ass1/FileSystem.h
  /home/ofirbed/Desktop/Ass1/Files.h
+CMakeFiles/ass1.dir/CpCommand.cpp.o
+ /home/ofirbed/Desktop/Ass1/Commands.h
+ /home/ofirbed/Desktop/Ass1/CpCommand.cpp
+ /home/ofirbed/Desktop/Ass1/FileSystem.h
+ /home/ofirbed/Desktop/Ass1/Files.h
 CMakeFiles/ass1.dir/Directory.cpp.o
  /home/ofirbed/Desktop/Ass1/Directory.cpp
  /home/ofirbed/Desktop/Ass1/Files.h
@@ -23,6 +28,11 @@ CMakeFiles/ass1.dir/Environment.cpp.o
  /home/ofirbed/Desktop/Ass1/Environment.h
  /home/ofirbed/Desktop/Ass1/FileSystem.h
  /home/ofirbed/Desktop/Ass1/Files.h
+CMakeFiles/ass1.dir/ErrorCommand.cpp.o
+ /home/ofirbed/Desktop/Ass1/Commands.h
+ /home/ofirbed/Desktop/Ass1/ErrorCommand.cpp
+ /home/ofirbed/Desktop/Ass1/FileSystem.h
+ /home/ofirbed/Desktop/Ass1/Files.h
 CMakeFiles/ass1.dir/File.cpp.o
  /home/ofirbed/Desktop/Ass1/File.cpp
  /home/ofirbed/Desktop/Ass1/Files.h
@@ -30,6 +40,11 @@ CMakeFiles/ass1.dir/FileSystem.cpp.o
  /home/ofirbed/Desktop/Ass1/FileSystem.cpp
  /home/ofirbed/Desktop/Ass1/FileSystem.h
  /home/ofirbed/Desktop/Ass1/Files.h
+CMakeFiles/ass1.dir/HistoryCommand.cpp.o
+ /home/ofirbed/Desktop/Ass1/Commands.h
+ /home/ofirbed/Desktop/Ass1/FileSystem.h
+ /home/ofirbed/Desktop/Ass1/Files.h
+ /home/ofirbed/Desktop/Ass1/HistoryCommand.cpp
 CMakeFiles/ass1.dir/LsCommand.cpp.o
  /home/ofirbed/Desktop/Ass1/Commands.h
  /home/ofirbed/Desktop/Ass1/FileSystem.h
@@ -61,6 +76,11 @@ CMakeFiles/ass1.dir/PwdCommand.cpp.o
  /home/ofirbed/Desktop/Ass1/FileSystem.h
  /home/ofirbed/Desktop/Ass1/Files.h
  /home/ofirbed/Desktop/Ass1/PwdCommand.cpp
+CMakeFiles/ass1.dir/RenameCommand.cpp.o
+ /home/ofirbed/Desktop/Ass1/Commands.h
+ /home/ofirbed/Desktop/Ass1/FileSystem.h
+ /home/ofirbed/Desktop/Ass1/Files.h
+ /home/ofirbed/Desktop/Ass1/RenameCommand.cpp
 CMakeFiles/ass1.dir/RmCommand.cpp.o
  /home/ofirbed/Desktop/Ass1/Commands.h
  /home/ofirbed/Desktop/Ass1/FileSystem.h

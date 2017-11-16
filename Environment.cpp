@@ -23,6 +23,8 @@ void Environment ::start() {
     string userInput;
     getline(cin, userInput);
 
+    vector<BaseCommand *> history;
+
     while (userInput != "exit") {
 
 
@@ -31,14 +33,17 @@ void Environment ::start() {
         vector<string> array{istream_iterator<string>{iss},
                              istream_iterator<string>{}};
 
+
+
         if (array.at(0).compare("pwd") == 0) {
 
             if (array.size() != 1)      //check if there is args after the command
                 printError("pwd args is not needed");
             else {
 
-                PwdCommand pwd("");
-                pwd.execute(fs);
+                BaseCommand *pwd=new PwdCommand("");
+                history.push_back(pwd);
+                pwd->execute(fs);
             }
         } else {
             if (array.at(0).compare("cd") == 0) {
@@ -47,8 +52,9 @@ void Environment ::start() {
                     printError("there is no path follow the command");
                 else {
 
-                    CdCommand cd(userInput.substr(3));
-                    cd.execute(fs);
+                    BaseCommand *cd = new CdCommand(userInput.substr(3));
+                    history.push_back(cd);
+                    cd->execute(fs);
                 }
             } else {
                 if (array.at(0).compare("ls") == 0) {
@@ -57,46 +63,66 @@ void Environment ::start() {
                         charToSend=2;
                     else
                         charToSend=3;
-                    LsCommand cd(userInput.substr(charToSend));
-                    cd.execute(fs);
+                    BaseCommand *ls = new LsCommand(userInput.substr(charToSend));
+                    history.push_back(ls);
+                    ls->execute(fs);
 
                 } else {
                     if (array.at(0).compare("mkdir") == 0) {
 
-                        MkdirCommand mkdir(userInput.substr(6));
-                        mkdir.execute(fs);
+                        BaseCommand *mkdir = new MkdirCommand(userInput.substr(6));
+                        history.push_back(mkdir);
+                        mkdir->execute(fs);
 
                     } else {
                         if (array.at(0).compare("mkfile") == 0) {
 
-                            MkfileCommand mkfile(userInput.substr(7));
-                            mkfile.execute(fs);
+                            BaseCommand *mkfile = new MkfileCommand(userInput.substr(7));
+                            history.push_back(mkfile);
+                            mkfile->execute(fs);
 
                         } else {
                             if (array.at(0).compare("cp") == 0) {
 
-                                //CpCommand cp(userInput.substr(3));
-                                //cp.execute(fs);
+                                BaseCommand *cp = new CpCommand(userInput.substr(3));
+                                history.push_back(cp);
+                                cp->execute(fs);
 
                             } else {
                                 if (array.at(0).compare("mv") == 0) {
 
-                                    MvCommand mv(userInput.substr(3));
-                                    mv.execute(fs);
+                                    BaseCommand *mv = new MvCommand(userInput.substr(3));
+                                    history.push_back(mv);
+                                    mv->execute(fs);
                                 } else {
                                     if (array.at(0).compare("rename") == 0) {
 
-                                        //RenameCommand rename(userInput.substr(7));
-                                        //rename.execute(fs);
+                                        BaseCommand* rename = new RenameCommand(userInput.substr(7));
+                                        history.push_back(rename);
+                                        rename->execute(fs);
 
                                     } else {
                                         if (array.at(0).compare("rm") == 0) {
 
-                                            RmCommand rm(userInput.substr(3));
-                                            rm.execute(fs);
+                                            BaseCommand *rm = new RmCommand(userInput.substr(3));
+                                            history.push_back(rm);
+                                            rm->execute(fs);
 
                                         }else{
-                                            std::cout << "There is no such command!" << std::endl;
+
+                                            if (array.at(0).compare("history") == 0) {
+
+                                                BaseCommand *hs = new HistoryCommand(userInput,history);
+                                                hs->execute(fs);
+                                                history.push_back(hs);
+
+                                            }else{
+                                                BaseCommand *error = new ErrorCommand(userInput);
+                                                history.push_back(error);
+                                                error->execute(fs);
+
+                                            }
+
 
                                         }
                                     }
@@ -117,6 +143,11 @@ void Environment ::start() {
             std::cout << ">";
             getline(cin, userInput);
         }
+
+
+    for(int i=0;i<history.size();i++){
+        delete(history[i]);
+    }
 
         return;
 
