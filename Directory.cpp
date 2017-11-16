@@ -132,13 +132,14 @@ void Directory::sortByName() {
      }
 
 
-     int counter(0);
+    /* int counter(0);
      for(BaseFile* file : children){
          if(file->getName().compare(minName)==0){
              children.erase(children.begin()+counter);
          }
          counter++;
-     }
+     }*/
+     removeFromChildrenDirOrFile(minName);
      children.push_back(minDirectory);
      size--;
  }
@@ -165,13 +166,14 @@ void Directory::sortBySize() {
             }
         }
         //remove the min from the vector and then add it to the enf of the list
-        int counter(0);
+       /* int counter(0);
         for (BaseFile *file : children) {
             if (file->getName().compare(minDirectory->getName()) == 0) {
                 children.erase(children.begin() + counter);
             }
             counter++;
-        }
+        }*/
+        removeFromChildrenDirOrFile(minDirectory->getName());
         children.push_back(minDirectory);
         size--;
     }
