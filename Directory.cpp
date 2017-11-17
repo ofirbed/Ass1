@@ -41,7 +41,7 @@ void Directory::clear() {
     //delete (children);
 }
 
-Directory::Directory( const  Directory &other):BaseFile(other.getName()){//copy costructor
+/*Directory::Directory( const  Directory &other):BaseFile(other.getName()){//copy costructor
     parent = other.parent;
     for(int i=0;i<other.children.size();i++){
         children.push_back(other.children.at(i)->clone());
@@ -52,7 +52,7 @@ Directory::Directory( const  Directory &other):BaseFile(other.getName()){//copy 
     other.parent= NULL;
     other.children=NULL;
 
-}*/
+}
 
 
 BaseFile* Directory::clone() {
@@ -63,7 +63,65 @@ BaseFile* Directory::clone() {
     return dir;
 
 
+}*/
+
+
+
+Directory::Directory( const  Directory &other):BaseFile(other.getName()){//copy costructor
+    parent = other.parent;
+    for(int i=0;i<other.children.size();i++){
+        children.push_back(other.children.at(i)->clone());
+    }
 }
+
+
+BaseFile* Directory::clone() {
+    Directory* dir= new Directory(getName(),getParent());
+    for (int i=0;i<children.size();i++){
+        BaseFile * child = children.at(i)->clone();
+        if(child->getType().compare("DIR")==0){
+            Directory*  childptr = (Directory*)child;
+            childptr->setParent(dir);
+        }
+        dir->pushToChildren(child);
+
+    }
+    return dir;
+
+
+}
+Directory::Directory(Directory &&other):BaseFile(getName()),parent(other.parent),children(other.children) {
+    other.parent= nullptr;
+    other.children.clear();
+}
+
+Directory& Directory::operator=(const Directory &other) {//assignment operator
+    if(this!= &other){
+        clear();
+        parent = other.parent;
+        for(int i=0;i<other.children.size();i++){
+            children.push_back(other.children.at(i)->clone());
+        }
+    }
+}
+
+Directory& Directory::operator=(Directory &&other) {//move assignment
+    if(this!= &other) {
+        clear();
+        parent=other.parent;
+        children=other.children;
+        other.parent= nullptr;
+        other.children.clear();
+    }
+
+}
+
+
+
+
+
+
+
 
 
 
