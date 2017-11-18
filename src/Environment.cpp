@@ -13,7 +13,7 @@
 #include <iterator>
 using namespace std;
 
-Environment::Environment(){};
+Environment::Environment() {};
 
 void Environment ::start() {
 
@@ -23,7 +23,6 @@ void Environment ::start() {
     string userInput;
     getline(cin, userInput);
 
-    vector<BaseCommand *> history;
 
     while (userInput != "exit") {
 
@@ -35,27 +34,18 @@ void Environment ::start() {
 
 
         if(array.size()>0) {
-            if (array.at(0).compare("pwd") == 0) {
-
-                if (array.size() != 1)      //check if there is args after the command
-                    printError("pwd args is not needed");
-                else {
+            if (array.at(0).compare("pwd") == 0 & array.size() == 1) {  //check if there is args after the command
 
                     BaseCommand *pwd = new PwdCommand("");
-                    history.push_back(pwd);
+                    addToHistory(pwd);
                     pwd->execute(fs);
-                }
+
             } else {
-                if (array.at(0).compare("cd") == 0) {
-
-                    if (array.size() == 1)      //check if path after the command is exist
-                        printError("there is no path follow the command");
-                    else {
-
+                if (array.at(0).compare("cd") == 0& array.size() != 1) {    //check if path after the command is exist
                         BaseCommand *cd = new CdCommand(userInput.substr(3));
-                        history.push_back(cd);
+                        addToHistory(cd);
                         cd->execute(fs);
-                    }
+
                 } else {
                     if (array.at(0).compare("ls") == 0) {
                         int charToSend = 0;
@@ -64,61 +54,61 @@ void Environment ::start() {
                         else
                             charToSend = 3;
                         BaseCommand *ls = new LsCommand(userInput.substr(charToSend));
-                        history.push_back(ls);
+                        addToHistory(ls);
                         ls->execute(fs);
 
                     } else {
                         if (array.at(0).compare("mkdir") == 0 & array.size() == 2) {
 
                             BaseCommand *mkdir = new MkdirCommand(userInput.substr(6));
-                            history.push_back(mkdir);
+                            addToHistory(mkdir);
                             mkdir->execute(fs);
 
                         } else {
                             if (array.at(0).compare("mkfile") == 0 & (array.size() == 2 | array.size() == 3)) {
 
                                 BaseCommand *mkfile = new MkfileCommand(userInput.substr(7));
-                                history.push_back(mkfile);
+                                addToHistory(mkfile);
                                 mkfile->execute(fs);
 
                             } else {
                                 if (array.at(0).compare("cp") == 0) {
 
                                     BaseCommand *cp = new CpCommand(userInput.substr(3));
-                                    history.push_back(cp);
+                                    addToHistory(cp);
                                     cp->execute(fs);
 
                                 } else {
                                     if (array.at(0).compare("mv") == 0) {
 
                                         BaseCommand *mv = new MvCommand(userInput.substr(3));
-                                        history.push_back(mv);
+                                        addToHistory(mv);
                                         mv->execute(fs);
                                     } else {
                                         if (array.at(0).compare("rename") == 0) {
 
                                             BaseCommand *rename = new RenameCommand(userInput.substr(7));
-                                            history.push_back(rename);
+                                            addToHistory(rename);
                                             rename->execute(fs);
 
                                         } else {
                                             if (array.at(0).compare("rm") == 0) {
 
                                                 BaseCommand *rm = new RmCommand(userInput.substr(3));
-                                                history.push_back(rm);
+                                                addToHistory(rm);
                                                 rm->execute(fs);
 
                                             } else {
 
                                                 if (array.at(0).compare("history") == 0) {
 
-                                                    BaseCommand *hs = new HistoryCommand(userInput, history);
+                                                    BaseCommand *hs = new HistoryCommand(userInput, commandsHistory);
                                                     hs->execute(fs);
-                                                    history.push_back(hs);
+                                                    addToHistory(hs);
 
                                                 } else {
                                                     BaseCommand *error = new ErrorCommand(userInput);
-                                                    history.push_back(error);
+                                                    addToHistory(error);
                                                     error->execute(fs);
 
                                                 }
@@ -146,8 +136,8 @@ void Environment ::start() {
         }
 
 
-    for(int i=0;i<history.size();i++){
-        delete(history[i]);
+    for(int i=0;i<commandsHistory.size();i++){
+        delete(commandsHistory[i]);
     }
 
         return;
@@ -155,10 +145,19 @@ void Environment ::start() {
 }
 
 
- void Environment::  printError(string str){
+FileSystem& Environment::getFileSystem()  {
 
-
-     std :: cout << str << std::endl;
+    return fs;
 
 }
 
+const vector<BaseCommand*>& Environment::getHistory() const {
+
+    return commandsHistory;
+
+}
+
+void Environment::addToHistory(BaseCommand *command) {
+    commandsHistory.push_back(command);
+
+}
