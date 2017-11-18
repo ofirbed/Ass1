@@ -20,6 +20,6 @@ File::File(const File &other):BaseFile(other.getName()){//copy constructor
 
 
 
-BaseFile::~BaseFile() {}
+ BaseFile:: ~BaseFile() {}
 
 
