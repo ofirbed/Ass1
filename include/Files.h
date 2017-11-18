@@ -69,7 +69,7 @@ public:
 	Directory( const  Directory &other);
 	//Directory(Directory &&other);
 	BaseFile* clone();
-	~Directory();
+	virtual ~Directory();
 	void clear();
 	void removeDir(string name);		//remove dir by name
     void removeFromChildrenDirOrFile(string name);

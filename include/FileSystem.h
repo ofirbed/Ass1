@@ -16,6 +16,11 @@ public:
     int cdCommand(string path);
 	BaseFile* getFileByPath(string path);
 
+	FileSystem( const  FileSystem &other);
+    FileSystem(FileSystem &&other);
+    FileSystem& operator=(const FileSystem &other);
+    virtual  ~FileSystem();
+
 };
 
 
