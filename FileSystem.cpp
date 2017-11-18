@@ -41,6 +41,9 @@ BaseFile* FileSystem::getFileByPath(string path) {
     string parentPath = path.substr(0,found);
     string nameOfFileOrDir =  path.substr(found+1);
 
+    if(parentPath.compare("")==0)
+        parentPath="/";
+
     Directory *currDirectory = &getWorkingDirectory();
 
     if(cdCommand(path)==2){

@@ -14,3 +14,12 @@ string File::getType() {
 }
 
 
+BaseFile* File::clone() {
+    // return new File(getName(),getSize());
+    BaseFile *f = new File(getName(),getSize());
+    return f;
+
+}
+
+
+

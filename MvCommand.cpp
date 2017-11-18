@@ -34,7 +34,7 @@ void MvCommand::execute(FileSystem &fs) {
         BaseFile *sourceFileOrDir = fs.getFileByPath(source);
         BaseFile *destinationDir = fs.getFileByPath(destination);
 
-        if(sourceFileOrDir== nullptr | destinationDir== nullptr | destinationDir->getType()!= "DIR"){   //if one of the args is not a valid path
+        if(sourceFileOrDir== nullptr | destinationDir== nullptr || destinationDir->getType()!= "DIR"){   //if one of the args is not a valid path
             std::cout << "No such file or directory" << std::endl;
         }else{
 

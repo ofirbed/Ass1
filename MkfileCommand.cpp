@@ -21,7 +21,7 @@ void MkfileCommand::execute(FileSystem &fs) {
     int fileSize = atoi(strSize.c_str());//convert to int
     Directory* workingDirectory = &fs.getWorkingDirectory();
     if(fs.cdCommand(path)!=0){
-        std::cout<<"file already exist \n" ;
+        std::cout<<"file already exist"<< std::endl;
         fs.setWorkingDirectory(workingDirectory);
         return;
     }
@@ -35,7 +35,7 @@ void MkfileCommand::execute(FileSystem &fs) {
     else
         path=path.substr(0,index);
     if(fs.cdCommand(path)==0) {
-        "the system cannot fint the path specified";
+        std::cout<<"the system cannot find the path specified" << std::endl;
         fs.setWorkingDirectory(workingDirectory);
         return;
     }

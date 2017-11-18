@@ -20,8 +20,8 @@ MkdirCommand::MkdirCommand(string args): BaseCommand(args){}
 void MkdirCommand::execute(FileSystem &fs) {//*******right now we assume that the path not include files******
     string path = getArgs();
 Directory * workingDirectory = &fs.getWorkingDirectory();//save the curr working directory
-if(fs.cdCommand(path)==1) {//that meen the dir is already exist
-    std::cout << "the file already exist";
+if(fs.cdCommand(path)==1) {//that mean the dir is already exist
+    std::cout << "the directory already exist"<< std::endl;
     fs.setWorkingDirectory(workingDirectory);//return to the prev working directory
     return;
 }

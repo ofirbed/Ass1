@@ -31,7 +31,7 @@ void LsCommand ::execute(FileSystem &fs) {
         }
     }
     else
-        std::cout << "The path is not valid" << std::endl;
+        std::cout << "The system cannot find the path specified" << std::endl;
 
     fs.cdCommand(currDirectory->getAbsolutePath());
 

@@ -18,7 +18,7 @@ void CpCommand::execute(FileSystem &fs) {
     //   fs.setWorkingDirectory(currWorkingDirectory);
 
     if (flag == 0){//the path not exist{
-        std::cout << "no such file or directory";
+        std::cout << "no such file or directory"<< std::endl;;
         return;
     }
     if(flag==1)//return to curr working directory

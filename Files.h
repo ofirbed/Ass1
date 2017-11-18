@@ -73,6 +73,9 @@ public:
 	void clear();
 	void removeDir(string name);		//remove dir by name
     void removeFromChildrenDirOrFile(string name);
+	Directory(Directory &&other);
+	Directory& operator=(const Directory &other); //assignment operator
+	Directory& operator=(Directory &&other);
 };
 
 #endif

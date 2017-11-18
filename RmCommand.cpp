@@ -16,7 +16,7 @@ void RmCommand::execute(FileSystem &fs) {
         std::cout << "Can’t remove directory" << std::endl;
     else {
 
-        if(path.at(0)!='/' & path.at(0)!='.' & path.at(1)!='.')                                  //if the path is just file name, convert it to real path
+        if(path.at(0)!='/' | (path.length()>2 && (path.at(0)!='.' & path.at(1)!='.')))                                  //if the path is just file name, convert it to real path
             path=currDirectory->getAbsolutePathWithouRoot()+"/"+path;
 
         int argType = fs.cdCommand(path);
