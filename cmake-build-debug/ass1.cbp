@@ -84,76 +84,70 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/BaseCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/include/Commands.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/BaseFile.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/include/Files.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/CdCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/include/GlobalVariables.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/Commands.h">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/BaseCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/CpCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/BaseFile.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/Directory.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/CdCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/Environment.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/CpCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/Environment.h">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/Directory.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/ErrorCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/Environment.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/File.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/ErrorCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/FileSystem.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/File.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/FileSystem.h">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/FileSystem.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/Files.h">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/HistoryCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/GlobalVariables.h">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/LsCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/HistoryCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/Main.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/LsCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/MkdirCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/Main.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/MkfileCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/MkdirCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/MvCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/MkfileCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/PwdCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/MvCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/RenameCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/PwdCommand.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/RmCommand.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/RenameCommand.cpp">
-			<Option target="ass1"/>
-		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/RmCommand.cpp">
-			<Option target="ass1"/>
-		</Unit>
-		<Unit filename="/home/ofirbed/Desktop/Ass1/main.cpp">
+		<Unit filename="/home/ofirbed/Desktop/Ass1/src/main.cpp">
 			<Option target="ass1"/>
 		</Unit>
 		<Unit filename="/home/ofirbed/Desktop/Ass1/CMakeLists.txt">
