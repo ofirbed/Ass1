@@ -4,7 +4,7 @@
 
 #include "../include/Files.h"
 using namespace std;
-File::File(string name, int size): BaseFile(name){
+File::File(string name, int size): BaseFile(name),size(){
     this->size=size;
 }
 int File::getSize() {return size;}

@@ -19,6 +19,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ass1.dir/src/CpCommand.cpp.o"
   "CMakeFiles/ass1.dir/src/RenameCommand.cpp.o"
   "CMakeFiles/ass1.dir/src/VerboseCommand.cpp.o"
+  "CMakeFiles/ass1.dir/src/ExecCommand.cpp.o"
   "ass1.pdb"
   "ass1"
 )

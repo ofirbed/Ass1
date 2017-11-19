@@ -14,7 +14,7 @@ void RenameCommand::execute(FileSystem &fs) {
     string workingDirectoryPath = fs.getWorkingDirectory().getAbsolutePath();
     int flag = fs.cdCommand(sourcePath);
     if(flag ==0) {
-        std::cout << "no such file or directory \n";
+        std::cout << "No such file or directory"<< std::endl;
         return;
     }
     if(flag ==1) {

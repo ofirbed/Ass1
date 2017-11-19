@@ -47,7 +47,9 @@ BaseFile* FileSystem::getFileByPath(string path) {
 
     Directory *currDirectory = &getWorkingDirectory();
 
-    if(cdCommand(path)==2){
+    int value = cdCommand(path);
+
+    if((value)==2){
         cdCommand(parentPath);
         BaseFile* output = getWorkingDirectory().getDirChildByName(nameOfFileOrDir);
         if(output!=NULL) {
@@ -56,7 +58,7 @@ BaseFile* FileSystem::getFileByPath(string path) {
         }
 
     }
-    if(cdCommand(path)==1){
+    if((value)==1){
         Directory *output = &getWorkingDirectory();
         cdCommand(currDirectory->getAbsolutePath());
         return output;
@@ -110,7 +112,7 @@ int FileSystem::cdCommand(string path) {//return 0 if no path like this 1 if the
         while (ss >> temp)
             array.push_back(temp);
         currDirectory = rootDirectory;
-        for (signed int i = 0; i < array.size(); i++) {
+        for (unsigned int i = 0; i < array.size(); i++) {
             if (array.at(i).compare("..") == 0) {
                 currDirectory = currDirectory->getParent();
                 if (currDirectory == NULL)
@@ -126,7 +128,7 @@ int FileSystem::cdCommand(string path) {//return 0 if no path like this 1 if the
                 if (child != NULL && child->getType().compare("DIR") == 0)
                     currDirectory = (Directory *) child;
                     //currDirectory = currDirectory->getDirChildByName(array.at(i));
-                else if (child == NULL || (i < array.size() - 1) & child->getType().compare("FILE") == 0)
+                else if ((child == NULL) || ((i < array.size() - 1) & (child->getType().compare("FILE") == 0)))
                     return 0;
 
                 else
@@ -146,7 +148,7 @@ int FileSystem::cdCommand(string path) {//return 0 if no path like this 1 if the
     while (ss >> temp)
         array.push_back(temp);
     //  currDirectory = workingDirectory;
-    for (signed int i = 0; i < array.size(); i++) {
+    for (unsigned int i = 0; i < array.size(); i++) {
         if (array.at(i).compare("..") == 0) {
             currDirectory = currDirectory->getParent();
             if (currDirectory == NULL)
@@ -162,7 +164,7 @@ int FileSystem::cdCommand(string path) {//return 0 if no path like this 1 if the
             if (child != NULL && child->getType().compare("DIR") == 0)
                 //currDirectory = currDirectory->getDirChildByName(array.at(i));
                 currDirectory = (Directory *) child;
-            else if (child == NULL || (i < array.size() - 1) & child->getType().compare("FILE") == 0)
+            else if ((child == NULL )|| ((i < array.size() - 1) & (child->getType().compare("FILE") == 0)))
                 return 0;
 
             else
@@ -178,9 +180,9 @@ int FileSystem::cdCommand(string path) {//return 0 if no path like this 1 if the
 
 
 
-FileSystem ::FileSystem(const FileSystem &other) {
-    if(verbose==1|verbose==3)
-        std:cout<<"FileSystem(const FileSystem &other)"<<std::endl;
+FileSystem ::FileSystem(const FileSystem &other) :rootDirectory(),workingDirectory() {
+    if((verbose==1)|(verbose==3))
+        cout<<"FileSystem(const FileSystem &other)"<<std::endl;
 
     rootDirectory=(Directory*)other.rootDirectory->clone();
     workingDirectory=rootDirectory;
@@ -189,16 +191,16 @@ FileSystem ::FileSystem(const FileSystem &other) {
 }
 
 
-FileSystem ::FileSystem(FileSystem &&other):rootDirectory(other.rootDirectory) {
-    if(verbose==1|verbose==3)
-        std:cout<<"FileSystem(FileSystem &&other)"<<std::endl;
+FileSystem ::FileSystem(FileSystem &&other):rootDirectory(other.rootDirectory),workingDirectory() {
+    if((verbose==1)|(verbose==3))
+        cout<<"FileSystem(FileSystem &&other)"<<std::endl;
     workingDirectory = rootDirectory;
     cdCommand(other.workingDirectory->getAbsolutePath());
 
 }
 FileSystem& FileSystem::operator=(const FileSystem &other) {
-    if(verbose==1|verbose==3)
-        std:cout<<"FileSystem& operator=(const FileSystem &other)"<<std::endl;
+    if((verbose==1)|(verbose==3))
+        cout<<"FileSystem& operator=(const FileSystem &other)"<<std::endl;
 
     if(this!=&other){
         delete(rootDirectory);
@@ -210,7 +212,7 @@ FileSystem& FileSystem::operator=(const FileSystem &other) {
 
 }
 FileSystem& FileSystem::operator=(FileSystem &&other) {
-    if (verbose == 1 | verbose == 3)
+    if ((verbose == 1) |( verbose == 3))
         cout << "FileSystem& operator=(FileSystem &&other)" << std::endl;
 
     if (this != &other) {
@@ -220,11 +222,12 @@ FileSystem& FileSystem::operator=(FileSystem &&other) {
         other.rootDirectory = nullptr;
         other.workingDirectory = nullptr;
     }
+    return *this;
 }
 
 FileSystem::~FileSystem() {
-    if(verbose==1|verbose==3)
-        std:cout<<"~FileSystem()"<<std::endl;
+    if((verbose==1)|(verbose==3))
+        cout<<"~FileSystem()"<<std::endl;
 
     delete (rootDirectory);
 

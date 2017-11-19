@@ -33,6 +33,11 @@ CMakeFiles/ass1.dir/src/ErrorCommand.cpp.o: ../include/FileSystem.h
 CMakeFiles/ass1.dir/src/ErrorCommand.cpp.o: ../include/Files.h
 CMakeFiles/ass1.dir/src/ErrorCommand.cpp.o: ../src/ErrorCommand.cpp
 
+CMakeFiles/ass1.dir/src/ExecCommand.cpp.o: ../include/Commands.h
+CMakeFiles/ass1.dir/src/ExecCommand.cpp.o: ../include/FileSystem.h
+CMakeFiles/ass1.dir/src/ExecCommand.cpp.o: ../include/Files.h
+CMakeFiles/ass1.dir/src/ExecCommand.cpp.o: ../src/ExecCommand.cpp
+
 CMakeFiles/ass1.dir/src/File.cpp.o: ../include/Files.h
 CMakeFiles/ass1.dir/src/File.cpp.o: ../src/File.cpp
 

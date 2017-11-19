@@ -21,7 +21,7 @@ void MkdirCommand::execute(FileSystem &fs) {//*******right now we assume that th
     string path = getArgs();
 Directory * workingDirectory = &fs.getWorkingDirectory();//save the curr working directory
 if(fs.cdCommand(path)==1) {//that mean the dir is already exist
-    std::cout << "the directory already exist"<< std::endl;
+    std::cout << "The directory already exists"<< std::endl;
     fs.setWorkingDirectory(workingDirectory);//return to the prev working directory
     return;
 }
@@ -43,7 +43,7 @@ if(path.at(0)=='/') {//if start from root we do cd to root
                          istream_iterator<string>{}};
 
     bool flag = false;//to know when we need to stop doing cd and start making directory
-    for(int i=0;i<array.size();i++){
+    for(unsigned int i=0;i<array.size();i++){
         if(!flag){
             if(fs.cdCommand(array.at(i))== 0)//the file dont exist and need to create
                 flag= true;//from now need to create files

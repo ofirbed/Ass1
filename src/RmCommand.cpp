@@ -12,11 +12,11 @@ void RmCommand::execute(FileSystem &fs) {
     string path(getArgs());
     Directory *currDirectory = &fs.getWorkingDirectory();
 
-    if(path.compare("/")==0 | path.compare(fs.getWorkingDirectory().getAbsolutePath())==0)      //if it root or working directory
-        std::cout << "Can’t remove directory" << std::endl;
+    if((path.compare("/")==0 )| (path.compare(fs.getWorkingDirectory().getAbsolutePath())==0))      //if it root or working directory
+        std::cout << "Can't remove directory" << std::endl;
     else {
 
-        if(path.at(0)!='/' | (path.length()>2 && (path.at(0)!='.' & path.at(1)!='.')))                                  //if the path is just file name, convert it to real path
+        if((path.at(0)!='/' )|((((path.length()>2 )&&( (path.at(0))!='.' )&(path.at(1)!='.')))))                                  //if the path is just file name, convert it to real path
             path=currDirectory->getAbsolutePathWithouRoot()+"/"+path;
 
         int argType = fs.cdCommand(path);

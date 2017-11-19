@@ -13,11 +13,11 @@
 #include <iterator>
 using namespace std;
 extern  unsigned  int verbose;
-Environment::Environment() {};
+Environment::Environment() :commandsHistory(),fs() {};
 
 void Environment ::start() {
 
-    std::cout << fs.getWorkingDirectory().getAbsolutePath() + " ";
+    std::cout << fs.getWorkingDirectory().getAbsolutePath();
     std::cout << ">";
 
     string userInput;
@@ -25,8 +25,8 @@ void Environment ::start() {
 
 
     while (userInput != "exit") {
-        if(verbose ==2 |verbose ==3)
-            std:cout<<userInput<<std::endl;
+        if((verbose ==2) |(verbose ==3))
+            cout<<userInput<<std::endl;
 
         istringstream iss(userInput);
 
@@ -35,14 +35,14 @@ void Environment ::start() {
 
 
         if(array.size()>0) {
-            if (array.at(0).compare("pwd") == 0 & array.size() == 1) {  //check if there is args after the command
+            if ((array.at(0).compare("pwd") == 0) &( array.size() == 1)) {  //check if there is args after the command
 
                     BaseCommand *pwd = new PwdCommand("");
                     addToHistory(pwd);
                     pwd->execute(fs);
 
             } else {
-                if (array.at(0).compare("cd") == 0& array.size() != 1) {    //check if path after the command is exist
+                if ((array.at(0).compare("cd") == 0)&( array.size() != 1)) {    //check if path after the command is exist
                         BaseCommand *cd = new CdCommand(userInput.substr(3));
                         addToHistory(cd);
                         cd->execute(fs);
@@ -59,14 +59,14 @@ void Environment ::start() {
                         ls->execute(fs);
 
                     } else {
-                        if (array.at(0).compare("mkdir") == 0 & array.size() == 2) {
+                        if ((array.at(0).compare("mkdir") == 0 )&( array.size() == 2)) {
 
                             BaseCommand *mkdir = new MkdirCommand(userInput.substr(6));
                             addToHistory(mkdir);
                             mkdir->execute(fs);
 
                         } else {
-                            if (array.at(0).compare("mkfile") == 0 & (array.size() == 2 | array.size() == 3)) {
+                            if ((array.at(0).compare("mkfile") == 0) &( ((array.size() == 2) | (array.size() == 3)))) {
 
                                 BaseCommand *mkfile = new MkfileCommand(userInput.substr(7));
                                 addToHistory(mkfile);
@@ -115,9 +115,17 @@ void Environment ::start() {
                                                         verbosC->execute(fs);
 
                                                     }else {
-                                                        BaseCommand *error = new ErrorCommand(userInput);
-                                                        addToHistory(error);
-                                                        error->execute(fs);
+                                                        if(array.at(0).compare("exec")==0){
+                                                            BaseCommand* exec=new ExecCommand(userInput.substr(5),commandsHistory);
+                                                            addToHistory(exec);
+                                                            exec->execute(fs);
+
+                                                        }else {
+
+                                                            BaseCommand *error = new ErrorCommand(array.at(0));
+                                                            addToHistory(error);
+                                                            error->execute(fs);
+                                                        }
                                                     }
                                                 }
 
@@ -138,13 +146,13 @@ void Environment ::start() {
             }
         }
 
-            std::cout << fs.getWorkingDirectory().getAbsolutePath() + " ";
+            std::cout << fs.getWorkingDirectory().getAbsolutePath();
             std::cout << ">";
             getline(cin, userInput);
         }
 
 
-    for(int i=0;i<commandsHistory.size();i++){
+    for(unsigned int i=0;i<commandsHistory.size();i++){
         delete(commandsHistory[i]);
     }
 

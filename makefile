@@ -1,7 +1,7 @@
-all: ass1
+all: fs
 
-ass1: bin/BaseCommand.o bin/BaseFile.o bin/CdCommand.o bin/CpCommand.o bin/Directory.o bin/Environment.o bin/ErrorCommand.o bin/File.o bin/FileSystem.o bin/HistoryCommand.o bin/LsCommand.o bin/Main.o bin/MkdirCommand.o bin/MkfileCommand.o bin/MvCommand.o bin/PwdCommand.o bin/RenameCommand.o bin/RmCommand.o
-	g++ -o bin/ass1  bin/BaseCommand.o bin/BaseFile.o bin/CdCommand.o bin/CpCommand.o bin/Directory.o bin/Environment.o bin/ErrorCommand.o bin/File.o bin/FileSystem.o bin/HistoryCommand.o bin/LsCommand.o bin/Main.o bin/MkdirCommand.o bin/MkfileCommand.o bin/MvCommand.o bin/PwdCommand.o bin/RenameCommand.o bin/RmCommand.o
+fs: bin/BaseCommand.o bin/BaseFile.o bin/CdCommand.o bin/CpCommand.o bin/Directory.o bin/Environment.o bin/ErrorCommand.o bin/File.o bin/FileSystem.o bin/HistoryCommand.o bin/LsCommand.o bin/Main.o bin/MkdirCommand.o bin/MkfileCommand.o bin/MvCommand.o bin/PwdCommand.o bin/RenameCommand.o bin/RmCommand.o bin/VerboseCommand.o bin/ExecCommand.o
+	g++ -o bin/fs  bin/BaseCommand.o bin/BaseFile.o bin/CdCommand.o bin/CpCommand.o bin/Directory.o bin/Environment.o bin/ErrorCommand.o bin/File.o bin/FileSystem.o bin/HistoryCommand.o bin/LsCommand.o bin/Main.o bin/MkdirCommand.o bin/MkfileCommand.o bin/MvCommand.o bin/PwdCommand.o bin/RenameCommand.o bin/RmCommand.o bin/VerboseCommand.o bin/ExecCommand.o
 
 bin/BaseCommand.o: src/BaseCommand.cpp
 	g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/BaseCommand.o src/BaseCommand.cpp
@@ -56,6 +56,13 @@ bin/RenameCommand.o: src/RenameCommand.cpp
 
 bin/RmCommand.o: src/RmCommand.cpp
 	g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/RmCommand.o src/RmCommand.cpp
+
+bin/VerboseCommand.o: src/VerboseCommand.cpp
+	g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/VerboseCommand.o src/VerboseCommand.cpp
+
+bin/ExecCommand.o: src/ExecCommand.cpp
+	g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/ExecCommand.o src/ExecCommand.cpp
+
 
 
 clean:

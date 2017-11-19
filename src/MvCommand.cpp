@@ -34,12 +34,16 @@ void MvCommand::execute(FileSystem &fs) {
         BaseFile *sourceFileOrDir = fs.getFileByPath(source);
         BaseFile *destinationDir = fs.getFileByPath(destination);
 
-        if(sourceFileOrDir== nullptr | destinationDir== nullptr || destinationDir->getType()!= "DIR"){   //if one of the args is not a valid path
+        if(((sourceFileOrDir== nullptr) |( destinationDir== nullptr)) ||( destinationDir->getType()!= "DIR")){   //if one of the args is not a valid path
             std::cout << "No such file or directory" << std::endl;
         }else{
 
             fs.cdCommand(destination);                                      //move to destination dir
             fs.getWorkingDirectory().pushToChildren(sourceFileOrDir);       //add to children the pointer of the source file or dir
+            if(sourceFileOrDir->getType().compare("DIR")==0) {
+               Directory* dir= (Directory *) sourceFileOrDir;
+                dir->setParent(&fs.getWorkingDirectory());
+            }
 
 
 

@@ -13,7 +13,7 @@ HistoryCommand::HistoryCommand(string args, const vector<BaseCommand *> &history
 
 void HistoryCommand::execute(FileSystem &fs) {
 
-    for(int i=0;i<history.size();i++){
+    for(unsigned int i=0;i<history.size();i++){
         string output = to_string(i) +"\t"+ history[i]->toString();
         std::cout << output << std::endl;
     }
