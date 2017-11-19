@@ -13,3 +13,7 @@ string BaseCommand::getArgs() {
     return args;
 }
 
+BaseCommand::~BaseCommand() {
+
+}
+

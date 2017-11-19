@@ -19,6 +19,7 @@ public:
 	FileSystem( const  FileSystem &other);
     FileSystem(FileSystem &&other);
     FileSystem& operator=(const FileSystem &other);
+	FileSystem&operator=(FileSystem&& other);
     virtual  ~FileSystem();
 
 };

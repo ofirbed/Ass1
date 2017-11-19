@@ -13,9 +13,7 @@ void BaseFile::setName(string newName) {
     name = newName;
 }
 
-File::File(const File &other):BaseFile(other.getName()){//copy constructor
-    size = other.size;
-}
+
 
 
 

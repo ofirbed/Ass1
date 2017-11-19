@@ -33,7 +33,7 @@ public:
 	BaseFile* clone();
     virtual string getType();
 
-	File(const File &other);
+
 
 
 
@@ -70,7 +70,7 @@ public:
 	//Directory(Directory &&other);
 	BaseFile* clone();
 	virtual ~Directory();
-	void clear();
+	void clear(int childSize);
 	void removeDir(string name);		//remove dir by name
     void removeFromChildrenDirOrFile(string name);
 	Directory(Directory &&other);

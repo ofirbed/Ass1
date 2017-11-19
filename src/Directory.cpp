@@ -3,36 +3,32 @@
 //
 
 #include <algorithm>
+#include <iostream>
 #include "../include/Files.h"
 using namespace std;
-Directory::Directory(string name, Directory *parent) :BaseFile(name){
-    this->parent=parent;
+extern signed int verbose;
+Directory::Directory(string name, Directory *parent) :BaseFile(name),children(),parent(parent){
+    //this->parent=parent;
 }
-//Directory::Directory (const Directory* other):BaseFile(other->getName()){
 
-//}
-//void operator = (const Directory&other){
-    //this->setName(other.getName());
-  //  parent = parent
-
-//}
-//Directory* clone(){
-  //  return new Directory(*this);
-//}
 
 Directory::~Directory() {
+    if((verbose==1)|(verbose==3))
+        cout<<"~Directory()"<<std::endl;
 
-    clear();
+    int childSize= getChildren().size();
+    clear(childSize);
 }
 
-void Directory::clear() {
+void Directory::clear(int childSize) {
 
-    for (int i = 0; i < getChildren().size(); i++) {
-        BaseFile *child = getChildren().at(i);
+    for (int i = 0; i < childSize; i++) {
+        BaseFile *child = getChildren().at(0);
         if (child->getType().compare("FILE") == 0) {     //if the basefile is a file
-            removeFile(child->getName());
+            //removeFile(child->getName());
+            children.erase(children.begin());
         } else {
-            children.erase(children.begin()+i);
+            children.erase(children.begin());
             delete (child);
         }
 
@@ -41,35 +37,15 @@ void Directory::clear() {
     //delete (children);
 }
 
-/*Directory::Directory( const  Directory &other):BaseFile(other.getName()){//copy costructor
+
+
+
+
+Directory::Directory(const Directory &other):BaseFile(other.getName()),children(),parent(){//copy costructor
+    if((verbose==1)|(verbose==3))
+        cout<<"Directory(const Directory &other)"<<std::endl;
     parent = other.parent;
-    for(int i=0;i<other.children.size();i++){
-        children.push_back(other.children.at(i)->clone());
-    }
-}
-/*Directory::Directory(Directory &&other):BaseFile(other.getName()),parent(other.getParent()) ,children(other.getChildren()){//move constructor
-
-    other.parent= NULL;
-    other.children=NULL;
-
-}
-
-
-BaseFile* Directory::clone() {
-    Directory* dir= new Directory(getName(),getParent());
-    for (int i=0;i<children.size();i++){
-        dir->children.push_back(children.at(i)->clone());
-    }
-    return dir;
-
-
-}*/
-
-
-
-Directory::Directory( const  Directory &other):BaseFile(other.getName()){//copy costructor
-    parent = other.parent;
-    for(int i=0;i<other.children.size();i++){
+    for(unsigned int i=0;i<other.children.size();i++){
         children.push_back(other.children.at(i)->clone());
     }
 }
@@ -77,7 +53,7 @@ Directory::Directory( const  Directory &other):BaseFile(other.getName()){//copy 
 
 BaseFile* Directory::clone() {
     Directory* dir= new Directory(getName(),getParent());
-    for (int i=0;i<children.size();i++){
+    for (unsigned int i=0;i<children.size();i++){
         BaseFile * child = children.at(i)->clone();
         if(child->getType().compare("DIR")==0){
             Directory*  childptr = (Directory*)child;
@@ -90,29 +66,37 @@ BaseFile* Directory::clone() {
 
 
 }
-Directory::Directory(Directory &&other):BaseFile(getName()),parent(other.parent),children(other.children) {
+Directory::Directory(Directory &&other):BaseFile(getName()),children(other.children),parent(other.parent) {
+    if((verbose==1)|(verbose==3))
+        cout<<"Directory(Directory &&other)"<<std::endl;
     other.parent= nullptr;
     other.children.clear();
 }
 
 Directory& Directory::operator=(const Directory &other) {//assignment operator
+    if((verbose==1)|(verbose==3))
+        cout<<"Directory& operator=(const Directory &other)"<<std::endl;
     if(this!= &other){
-        clear();
+        clear(getChildren().size());
         parent = other.parent;
-        for(int i=0;i<other.children.size();i++){
+        for(unsigned int i=0;i<other.children.size();i++){
             children.push_back(other.children.at(i)->clone());
         }
     }
+    return *this;
 }
 
 Directory& Directory::operator=(Directory &&other) {//move assignment
+    if((verbose==1)|(verbose==3))
+        cout<<"Directory& operator=(Directory &&other)"<<std::endl;
     if(this!= &other) {
-        clear();
+        clear(getChildren().size());
         parent=other.parent;
         children=other.children;
         other.parent= nullptr;
         other.children.clear();
     }
+    return *this;
 
 }
 
@@ -247,7 +231,7 @@ void Directory ::pushToChildren(BaseFile * file) {
 
 int Directory::getSize() {
     int size = 0;
-    for (int i = 0; i < children.size(); i++) {
+    for (unsigned int i = 0; i < children.size(); i++) {
         size = size + children.at(i)->getSize();
     }
     return size;
@@ -286,7 +270,7 @@ string Directory::getAbsolutePathWithouRoot() {
 }
 
 BaseFile* Directory::getDirChildByName(string name) {
-    for( int i=0;i<children.size();i++){
+    for(unsigned int i=0;i<children.size();i++){
 
         if(name.compare(children.at(i)->getName())==0)
             return children.at(i);

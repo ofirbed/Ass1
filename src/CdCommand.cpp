@@ -18,10 +18,10 @@ CdCommand::CdCommand(string args) :BaseCommand(args){}
 void CdCommand::execute(FileSystem &fs) {
 
 
-    bool exist = fs.cdCommand(getArgs()) != 0;
+    bool exist = fs.cdCommand(getArgs()) == 1;
 
     if(!exist)
-        std::cout << "The system cannot find the path specified"<< std::endl;;
+        std::cout << "The system cannot find the path specified"<< std::endl;
 
 
    /*string path = getArgs();

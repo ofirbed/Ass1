@@ -12,7 +12,7 @@
 
 #include <iterator>
 using namespace std;
-
+extern  unsigned  int verbose;
 Environment::Environment() {};
 
 void Environment ::start() {
@@ -25,7 +25,8 @@ void Environment ::start() {
 
 
     while (userInput != "exit") {
-
+        if(verbose ==2 |verbose ==3)
+            std:cout<<userInput<<std::endl;
 
         istringstream iss(userInput);
 
@@ -106,11 +107,18 @@ void Environment ::start() {
                                                     hs->execute(fs);
                                                     addToHistory(hs);
 
-                                                } else {
-                                                    BaseCommand *error = new ErrorCommand(userInput);
-                                                    addToHistory(error);
-                                                    error->execute(fs);
 
+                                                } else {
+                                                    if(array.at(0).compare("verbose")==0){
+                                                        BaseCommand* verbosC=new VerboseCommand(userInput.substr(8));
+                                                        addToHistory(verbosC);
+                                                        verbosC->execute(fs);
+
+                                                    }else {
+                                                        BaseCommand *error = new ErrorCommand(userInput);
+                                                        addToHistory(error);
+                                                        error->execute(fs);
+                                                    }
                                                 }
 
 

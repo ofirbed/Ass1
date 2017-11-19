@@ -86,5 +86,10 @@ CMakeFiles/ass1.dir/src/RmCommand.cpp.o: ../include/FileSystem.h
 CMakeFiles/ass1.dir/src/RmCommand.cpp.o: ../include/Files.h
 CMakeFiles/ass1.dir/src/RmCommand.cpp.o: ../src/RmCommand.cpp
 
+CMakeFiles/ass1.dir/src/VerboseCommand.cpp.o: ../include/Commands.h
+CMakeFiles/ass1.dir/src/VerboseCommand.cpp.o: ../include/FileSystem.h
+CMakeFiles/ass1.dir/src/VerboseCommand.cpp.o: ../include/Files.h
+CMakeFiles/ass1.dir/src/VerboseCommand.cpp.o: ../src/VerboseCommand.cpp
+
 CMakeFiles/ass1.dir/src/main.cpp.o: ../src/main.cpp
 
