@@ -22,6 +22,8 @@ public:
 	void addToHistory(BaseCommand *command); // Add a new command to the history
 	const vector<BaseCommand*>& getHistory() const; // Return a reference to the history of commands
 
+
+
 };
 
 #endif

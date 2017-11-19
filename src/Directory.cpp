@@ -21,18 +21,21 @@ Directory::Directory(string name, Directory *parent) :BaseFile(name){
 //}
 
 Directory::~Directory() {
-
-    clear();
+    int childerSize = getChildren().size();
+    clear(childerSize);
 }
 
-void Directory::clear() {
+void Directory::clear(int childSize) {
 
-    for (int i = 0; i < getChildren().size(); i++) {
-        BaseFile *child = getChildren().at(i);
+
+    for (int i = 0; i < childSize; i++) {
+        BaseFile *child = getChildren().at(0);
         if (child->getType().compare("FILE") == 0) {     //if the basefile is a file
-            removeFile(child->getName());
+            //removeFile(child->getName());
+            children.erase(children.begin());
+            delete (child);
         } else {
-            children.erase(children.begin()+i);
+            children.erase(children.begin());
             delete (child);
         }
 
@@ -97,7 +100,7 @@ Directory::Directory(Directory &&other):BaseFile(getName()),parent(other.parent)
 
 Directory& Directory::operator=(const Directory &other) {//assignment operator
     if(this!= &other){
-        clear();
+        clear(getChildren().size());
         parent = other.parent;
         for(int i=0;i<other.children.size();i++){
             children.push_back(other.children.at(i)->clone());
@@ -107,7 +110,7 @@ Directory& Directory::operator=(const Directory &other) {//assignment operator
 
 Directory& Directory::operator=(Directory &&other) {//move assignment
     if(this!= &other) {
-        clear();
+        clear(getChildren().size());
         parent=other.parent;
         children=other.children;
         other.parent= nullptr;

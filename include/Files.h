@@ -69,8 +69,8 @@ public:
 	Directory( const  Directory &other);
 	//Directory(Directory &&other);
 	BaseFile* clone();
-	virtual ~Directory();
-	void clear();
+	 ~Directory();
+	void clear(int childSize);
 	void removeDir(string name);		//remove dir by name
     void removeFromChildrenDirOrFile(string name);
 	Directory(Directory &&other);

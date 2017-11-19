@@ -13,7 +13,7 @@
 #include <iterator>
 using namespace std;
 
-Environment::Environment() {};
+Environment::Environment()  {};
 
 void Environment ::start() {
 
@@ -135,7 +135,6 @@ void Environment ::start() {
             getline(cin, userInput);
         }
 
-
     for(int i=0;i<commandsHistory.size();i++){
         delete(commandsHistory[i]);
     }
@@ -161,3 +160,4 @@ void Environment::addToHistory(BaseCommand *command) {
     commandsHistory.push_back(command);
 
 }
+

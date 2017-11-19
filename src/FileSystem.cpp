@@ -17,6 +17,7 @@ Directory& FileSystem::getRootDirectory() const {
     return  *rootDirectory;
 }
 FileSystem::FileSystem():rootDirectory(new Directory("/",NULL)) , workingDirectory() {
+
     workingDirectory = rootDirectory;// probably not good line
      }
 
@@ -111,7 +112,7 @@ int FileSystem::cdCommand(string path) {//return 0 if no path like this 1 if the
         while (ss >> temp)
             array.push_back(temp);
         currDirectory = rootDirectory;
-        for( int i =0;i<array.size();i++){
+        for(signed int i =0;i<array.size();i++){
             BaseFile*  child= currDirectory->getDirChildByName(array.at(i));
             if(child!=NULL&&child->getType().compare("DIR")==0)
                 currDirectory=(Directory*)child;
