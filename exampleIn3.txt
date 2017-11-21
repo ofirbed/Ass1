@@ -1,0 +1,37 @@
+verbose 2
+history
+history
+history
+******************************* 0 *******************************
+mkfile rf1 100
+mkfile rf2 100
+mkfile rf3 50
+mkdir d1
+mkdir d2
+mkdir d3
+ls
+cd d1
+mkfile d1f1 1000
+mkfile d1f2 2000
+mkfile d1f3 30
+mkdir d11
+mkdir d12
+ls
+cd ../d2
+mkdir d21
+mkdir d22
+mkdir d23
+ls
+cd d21
+mkfile d21f1 1
+mkfile d21f2 2
+ls
+******************************* cp file *******************************
+cp d21f1 ..
+cp d21f1 ..
+ls
+cd ..
+ls
+cp ../rf1 d21
+
+exit

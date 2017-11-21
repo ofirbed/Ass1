@@ -36,36 +36,40 @@ void MvCommand::execute(FileSystem &fs) {
 
         if(((sourceFileOrDir== nullptr) |( destinationDir== nullptr)) ||( destinationDir->getType()!= "DIR")){   //if one of the args is not a valid path
             std::cout << "No such file or directory" << std::endl;
-        }else{
+        }else {
 
             fs.cdCommand(destination);                                      //move to destination dir
-            fs.getWorkingDirectory().pushToChildren(sourceFileOrDir);       //add to children the pointer of the source file or dir
-            if(sourceFileOrDir->getType().compare("DIR")==0) {
-               Directory* dir= (Directory *) sourceFileOrDir;
-                dir->setParent(&fs.getWorkingDirectory());
-            }
 
-
-
-
-            //remove the pointer from the source path
-            size_t found = source.find_last_of("/\\");
-            if(found==0)    //it mean that the path is direct from root : EX "/newDir"
-                found=found+1;
-            string parentSourcePath = source.substr(0,found);
-
-            fs.cdCommand(parentSourcePath);
-
-            fs.getWorkingDirectory().removeFromChildrenDirOrFile(sourceFileOrDir->getName());
-            /*int counter(0);
-            for (BaseFile *file : fs.getWorkingDirectory().getChildren()) {
-                if (file->getName().compare(sourceFileOrDir->getName()) == 0) {
-                    fs.getWorkingDirectory().getChildren().erase(fs.getWorkingDirectory().getChildren().begin() + counter);
+            if (!fs.getWorkingDirectory().ThereIsChildWithThatName(sourceFileOrDir->getName())) {
+                fs.getWorkingDirectory().pushToChildren(
+                        sourceFileOrDir);       //add to children the pointer of the source file or dir
+                if (sourceFileOrDir->getType().compare("DIR") == 0) {
+                    Directory *dir = (Directory *) sourceFileOrDir;
+                    dir->setParent(&fs.getWorkingDirectory());
                 }
-                counter++;
-            }*/
 
 
+
+
+                //remove the pointer from the source path
+                size_t found = source.find_last_of("/\\");
+                if (found == 0)    //it mean that the path is direct from root : EX "/newDir"
+                    found = found + 1;
+                string parentSourcePath = source.substr(0, found);
+
+                fs.cdCommand(parentSourcePath);
+
+                fs.getWorkingDirectory().removeFromChildrenDirOrFile(sourceFileOrDir->getName());
+                /*int counter(0);
+                for (BaseFile *file : fs.getWorkingDirectory().getChildren()) {
+                    if (file->getName().compare(sourceFileOrDir->getName()) == 0) {
+                        fs.getWorkingDirectory().getChildren().erase(fs.getWorkingDirectory().getChildren().begin() + counter);
+                    }
+                    counter++;
+                }*/
+
+
+            }
         }
 
     }else{

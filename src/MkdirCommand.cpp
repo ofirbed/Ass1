@@ -20,7 +20,7 @@ MkdirCommand::MkdirCommand(string args): BaseCommand(args){}
 void MkdirCommand::execute(FileSystem &fs) {//*******right now we assume that the path not include files******
     string path = getArgs();
 Directory * workingDirectory = &fs.getWorkingDirectory();//save the curr working directory
-if(fs.cdCommand(path)==1) {//that mean the dir is already exist
+if(fs.cdCommand(path)!=0) {//that mean the dir is already exist
     std::cout << "The directory already exists"<< std::endl;
     fs.setWorkingDirectory(workingDirectory);//return to the prev working directory
     return;
@@ -52,6 +52,7 @@ if(path.at(0)=='/') {//if start from root we do cd to root
             fs.getWorkingDirectory().pushToChildren(new Directory (array[i],&fs.getWorkingDirectory()));
             fs.cdCommand(array.at(i));
         }
+        flag = false;
     }
     fs.setWorkingDirectory(workingDirectory);//return the the prev working directory
 
