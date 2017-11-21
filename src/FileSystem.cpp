@@ -92,7 +92,10 @@ int FileSystem::cdCommand(string path) {//return 0 if no path like this 1 if the
         currDirectory = currDirectory->getParent();
         if (currDirectory == NULL)
             return 0;
-        path = path.substr(3);
+        if(path.size()<3)
+            path="";
+        else
+            path = path.substr(3);
         if (path.size() == 0) {// we know that curr is not null already becase if it was he was exit from the function
             workingDirectory = currDirectory;
             return 1;

@@ -6,43 +6,43 @@
 
 #IncludeRegexTransform: 
 
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 string
 -
 FileSystem.h
-/home/ofirbed/Desktop/Ass1/include/FileSystem.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/FileSystem.h
 
-/home/ofirbed/Desktop/Ass1/include/Environment.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Environment.h
 Files.h
-/home/ofirbed/Desktop/Ass1/include/Files.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Files.h
 Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 string
 -
 vector
 -
 
-/home/ofirbed/Desktop/Ass1/include/FileSystem.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/FileSystem.h
 Files.h
-/home/ofirbed/Desktop/Ass1/include/Files.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Files.h
 
-/home/ofirbed/Desktop/Ass1/include/Files.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Files.h
 string
 -
 vector
 -
 
-/home/ofirbed/Desktop/Ass1/src/BaseCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/BaseCommand.cpp
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 
-/home/ofirbed/Desktop/Ass1/src/BaseFile.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/BaseFile.cpp
 ../include/Files.h
-/home/ofirbed/Desktop/Ass1/include/Files.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Files.h
 
-/home/ofirbed/Desktop/Ass1/src/CdCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/CdCommand.cpp
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 iostream
 -
 algorithm
@@ -58,27 +58,27 @@ string
 sstream
 -
 
-/home/ofirbed/Desktop/Ass1/src/CpCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/CpCommand.cpp
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 iostream
 -
 
-/home/ofirbed/Desktop/Ass1/src/Directory.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/Directory.cpp
 algorithm
 -
 iostream
 -
 ../include/Files.h
-/home/ofirbed/Desktop/Ass1/include/Files.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Files.h
 
-/home/ofirbed/Desktop/Ass1/src/Environment.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/Environment.cpp
 iostream
 -
 algorithm
 -
 ../include/Environment.h
-/home/ofirbed/Desktop/Ass1/include/Environment.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Environment.h
 array
 -
 functional
@@ -88,25 +88,25 @@ sstream
 iterator
 -
 
-/home/ofirbed/Desktop/Ass1/src/ErrorCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/ErrorCommand.cpp
 iostream
 -
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 
-/home/ofirbed/Desktop/Ass1/src/ExecCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/ExecCommand.cpp
 iostream
 -
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 
-/home/ofirbed/Desktop/Ass1/src/File.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/File.cpp
 ../include/Files.h
-/home/ofirbed/Desktop/Ass1/include/Files.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Files.h
 
-/home/ofirbed/Desktop/Ass1/src/FileSystem.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/FileSystem.cpp
 ../include/FileSystem.h
-/home/ofirbed/Desktop/Ass1/include/FileSystem.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/FileSystem.h
 algorithm
 -
 array
@@ -124,25 +124,25 @@ sstream
 iterator
 -
 
-/home/ofirbed/Desktop/Ass1/src/HistoryCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/HistoryCommand.cpp
 iostream
 -
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 
-/home/ofirbed/Desktop/Ass1/src/LsCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/LsCommand.cpp
 iostream
 -
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 
-/home/ofirbed/Desktop/Ass1/src/Main.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/Main.cpp
 ../include/Environment.h
-/home/ofirbed/Desktop/Ass1/include/Environment.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Environment.h
 
-/home/ofirbed/Desktop/Ass1/src/MkdirCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/MkdirCommand.cpp
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 iostream
 -
 iostream
@@ -160,9 +160,9 @@ sstream
 iterator
 -
 
-/home/ofirbed/Desktop/Ass1/src/MkfileCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/MkfileCommand.cpp
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 iostream
 -
 algorithm
@@ -174,41 +174,41 @@ functional
 sstream
 -
 
-/home/ofirbed/Desktop/Ass1/src/MvCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/MvCommand.cpp
 sstream
 -
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 iterator
 -
 iostream
 -
 
-/home/ofirbed/Desktop/Ass1/src/PwdCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/PwdCommand.cpp
 iostream
 -
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 
-/home/ofirbed/Desktop/Ass1/src/RenameCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/RenameCommand.cpp
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 iostream
 -
 
-/home/ofirbed/Desktop/Ass1/src/RmCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/RmCommand.cpp
 iostream
 -
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 
-/home/ofirbed/Desktop/Ass1/src/VerboseCommand.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/VerboseCommand.cpp
 ../include/Commands.h
-/home/ofirbed/Desktop/Ass1/include/Commands.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
 iostream
 -
 
-/home/ofirbed/Desktop/Ass1/src/main.cpp
+/home/chaimbgu/Desktop/Ass1/Ass1/src/main.cpp
 iostream
 -
 

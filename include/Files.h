@@ -76,6 +76,7 @@ public:
 	Directory(Directory &&other);
 	Directory& operator=(const Directory &other); //assignment operator
 	Directory& operator=(Directory &&other);
+	bool ThereIsChildWithThatName(string name);
 };
 
 #endif

@@ -284,4 +284,13 @@ string Directory::getType() {
     return "DIR";
 }
 
+bool Directory::ThereIsChildWithThatName(string name) {
+    bool thereIs = false;
+    for(BaseFile* file : getChildren()){
+        if(file->getName().compare(name)==0)
+            thereIs = true;
+    }
+    return thereIs;
+}
+
 

@@ -29,6 +29,12 @@ void CpCommand::execute(FileSystem &fs) {
     if(flag==1){//dest file exist
         Directory * parent = &fs.getWorkingDirectory();//because now the working directory is on dest path
         fs.cdCommand(currWorkingDirectory->getAbsolutePath());//return to exist working directory
+        string name = fs.getFileByPath(sourcePath)->getName();
+        string checkPath = destPath+"/"+name;
+        if(fs.cdCommand(checkPath)!=0){
+            fs.cdCommand(currWorkingDirectory->getAbsolutePath());
+            return;
+        }
         BaseFile* copyBaseFile=fs.getFileByPath(sourcePath)->clone();
         if(copyBaseFile->getType().compare("DIR")==0) {
             Directory *tocopy = (Directory *) copyBaseFile;
