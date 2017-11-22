@@ -55,3 +55,7 @@ void CpCommand::execute(FileSystem &fs) {
 string CpCommand::toString() {
     return "cp";
 }
+BaseCommand* CpCommand::clone(vector<BaseCommand *> &history) {
+    BaseCommand* copy = new CpCommand(getArgs());
+    return copy;
+}

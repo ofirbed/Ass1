@@ -16,6 +16,7 @@ public:
 	virtual void execute(FileSystem & fs) = 0;
 	virtual string toString() = 0;
 	virtual ~BaseCommand();
+	virtual BaseCommand* clone(vector<BaseCommand*> &history)=0 ;
 };
 
 class PwdCommand : public BaseCommand {
@@ -24,6 +25,7 @@ public:
 	PwdCommand(string args);
 	void execute(FileSystem & fs); // Every derived class should implement this function according to the document (pdf)
 	virtual string toString();
+	virtual BaseCommand* clone(vector<BaseCommand*> &history);
 };
 
 class CdCommand : public BaseCommand {
@@ -32,6 +34,7 @@ public:
 	CdCommand(string args);
 	void execute(FileSystem & fs);
 	string toString();
+	virtual BaseCommand* clone(vector<BaseCommand*> &history);
 };
 
 class LsCommand : public BaseCommand {
@@ -42,6 +45,7 @@ public:
 	string toString();
 	string getFileDetails(BaseFile &file);
 	Directory* getDirectory(string args, FileSystem &fs);
+	virtual BaseCommand* clone(vector<BaseCommand*> &history);
 };
 
 class MkdirCommand : public BaseCommand {
@@ -50,6 +54,7 @@ public:
 	MkdirCommand(string args);
 	void execute(FileSystem & fs);
 	string toString();
+	virtual BaseCommand* clone(vector<BaseCommand*> &history);
 };
 
 class MkfileCommand : public BaseCommand {
@@ -58,6 +63,7 @@ public:
 	MkfileCommand(string args);
 	void execute(FileSystem & fs);
 	string toString();
+	virtual BaseCommand* clone(vector<BaseCommand*> &history);
 };
 
 class CpCommand : public BaseCommand {
@@ -66,6 +72,7 @@ public:
 	CpCommand(string args);
 	void execute(FileSystem & fs);
 	string toString();
+	virtual BaseCommand* clone(vector<BaseCommand*> &history);
 };
 
 class MvCommand : public BaseCommand {
@@ -74,6 +81,7 @@ public:
 	MvCommand(string args);
 	void execute(FileSystem & fs);
 	string toString();
+	virtual BaseCommand* clone(vector<BaseCommand*> &history);
 };
 
 class RenameCommand : public BaseCommand {
@@ -82,6 +90,7 @@ public:
 	RenameCommand(string args);
 	void execute(FileSystem & fs);
 	string toString();
+	virtual BaseCommand* clone(vector<BaseCommand*> &history);
 };
 
 class RmCommand : public BaseCommand {
@@ -91,6 +100,7 @@ public:
 	void execute(FileSystem & fs);
 	string toString();
 	void DeleteBaseFile(BaseFile *baseFile,string pathOfParentDir,FileSystem &fs);
+	virtual BaseCommand* clone(vector<BaseCommand*> &history);
 };
 
 class HistoryCommand : public BaseCommand {
@@ -100,6 +110,7 @@ public:
 	HistoryCommand(string args, const vector<BaseCommand *> & history);
 	void execute(FileSystem & fs);
 	string toString();
+	virtual BaseCommand* clone(vector<BaseCommand*> &history);
 };
 
 
@@ -109,6 +120,7 @@ public:
 	VerboseCommand(string args);
 	void execute(FileSystem & fs);
 	string toString();
+	virtual BaseCommand* clone(vector<BaseCommand*> &history);
 };
 
 class ErrorCommand : public BaseCommand {
@@ -117,6 +129,7 @@ public:
 	ErrorCommand(string args);
 	void execute(FileSystem & fs);
 	string toString();
+	virtual BaseCommand* clone(vector<BaseCommand*> &history);
 };
 
 class ExecCommand : public BaseCommand {
@@ -126,6 +139,7 @@ public:
 	ExecCommand(string args, const vector<BaseCommand *> & history);
 	void execute(FileSystem & fs);
 	string toString();
+	virtual BaseCommand* clone(vector<BaseCommand*> &history);
 };
 
 

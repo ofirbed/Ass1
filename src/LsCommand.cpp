@@ -71,7 +71,11 @@ string LsCommand::getFileDetails(BaseFile &file) {
      return type+"\t"+name+"\t"+to_string(size);
  }
 
+BaseCommand* LsCommand::clone(vector<BaseCommand *> &history)  {
 
+    BaseCommand* copy = new LsCommand(getArgs());
+    return copy;
+}
 
 
 

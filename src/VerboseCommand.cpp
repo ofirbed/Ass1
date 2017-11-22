@@ -22,3 +22,8 @@ void VerboseCommand::execute(FileSystem &fs) {
 string VerboseCommand::toString() {
     return "verbose";
 }
+
+BaseCommand* VerboseCommand::clone(vector<BaseCommand *> &history) {
+    BaseCommand* copy = new VerboseCommand(getArgs());
+    return copy;
+}

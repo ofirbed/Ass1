@@ -5,6 +5,7 @@
 #include <iostream>
 #include <algorithm>
 #include "../include/Environment.h"
+#include "../include/GlobalVariables.h"
 #include <array>
 #include <functional>
 #include <sstream>
@@ -12,7 +13,7 @@
 
 #include <iterator>
 using namespace std;
-extern  unsigned  int verbose;
+//extern  unsigned  int verbose;
 Environment::Environment() :commandsHistory(),fs() {};
 
 void Environment ::start() {
@@ -103,7 +104,7 @@ void Environment ::start() {
 
                                                 if (array.at(0).compare("history") == 0) {
 
-                                                    BaseCommand *hs = new HistoryCommand(userInput, commandsHistory);
+                                                    BaseCommand *hs = new HistoryCommand("", commandsHistory);
                                                     hs->execute(fs);
                                                     addToHistory(hs);
 
@@ -122,7 +123,7 @@ void Environment ::start() {
 
                                                         }else {
 
-                                                            BaseCommand *error = new ErrorCommand(array.at(0));
+                                                            BaseCommand *error = new ErrorCommand(userInput);
                                                             addToHistory(error);
                                                             error->execute(fs);
                                                         }
@@ -152,9 +153,7 @@ void Environment ::start() {
         }
 
 
-    for(unsigned int i=0;i<commandsHistory.size();i++){
-        delete(commandsHistory[i]);
-    }
+
 
         return;
 
@@ -175,5 +174,56 @@ const vector<BaseCommand*>& Environment::getHistory() const {
 
 void Environment::addToHistory(BaseCommand *command) {
     commandsHistory.push_back(command);
+
+
+}
+
+
+Environment::~Environment() {
+    if((verbose==1)|(verbose==3))
+        cout<<"~Environment()"<<std::endl;
+    for(unsigned int i=0;i<commandsHistory.size();i++){
+        delete(commandsHistory[i]);
+    }
+}
+
+Environment::Environment(const Environment &other):commandsHistory(),fs(other.fs) {
+    if((verbose==1)|(verbose==3))
+        cout<<"Environment(const Environment &other)"<<std::endl;
+    for(unsigned int i=0;i<other.commandsHistory.size();i++) {
+        BaseCommand *base = other.commandsHistory.at(i);
+        BaseCommand* copyBase = base->clone(commandsHistory);
+        commandsHistory.push_back(copyBase);
+    }
+}
+Environment::Environment(Environment &&other):commandsHistory(other.commandsHistory),fs(other.fs) {
+    if((verbose==1)|(verbose==3))
+        cout<<"Environment(Environment &&other)"<<std::endl;
+    other.commandsHistory.clear();
+}
+Environment& Environment::operator=(const Environment &other) {
+    if((verbose==1)|(verbose==3))
+        cout<<"Environment& operator=(const Environment &other)"<<std::endl;
+    if(this!= &other){
+        commandsHistory.clear();
+        for(unsigned int i=0;i<other.commandsHistory.size();i++) {
+            BaseCommand *base = other.commandsHistory.at(i);
+            commandsHistory.push_back(base->clone(commandsHistory));
+        }
+        fs=other.fs;
+    }
+    return *this;
+
+}
+Environment& Environment::operator=(Environment &&other) {
+    if((verbose==1)|(verbose==3))
+        cout<<"Environment& operator=(Environment &&other)"<<std::endl;
+    if(this!= &other){
+        commandsHistory.clear();
+        commandsHistory = other.commandsHistory;
+        fs=other.fs;
+        other.commandsHistory.clear();
+    }
+    return *this;
 
 }

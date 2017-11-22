@@ -5,8 +5,9 @@
 #include <algorithm>
 #include <iostream>
 #include "../include/Files.h"
+#include "../include/GlobalVariables.h"
 using namespace std;
-extern signed int verbose;
+//extern signed int verbose;
 Directory::Directory(string name, Directory *parent) :BaseFile(name),children(),parent(parent){
     //this->parent=parent;
 }
@@ -24,13 +25,9 @@ void Directory::clear(int childSize) {
 
     for (int i = 0; i < childSize; i++) {
         BaseFile *child = getChildren().at(0);
-        if (child->getType().compare("FILE") == 0) {     //if the basefile is a file
-            //removeFile(child->getName());
-            children.erase(children.begin());
-        } else {
-            children.erase(children.begin());
-            delete (child);
-        }
+        children.erase(children.begin());
+        delete (child);
+
 
     }
 

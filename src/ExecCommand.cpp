@@ -28,4 +28,8 @@ string ExecCommand::toString() {
 
     return "exec";
 }
+BaseCommand* ExecCommand::clone(vector<BaseCommand *> &history) {
+    BaseCommand* copy = new ExecCommand(getArgs(),history);
+    return copy;
 
+}

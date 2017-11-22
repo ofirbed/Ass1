@@ -12,12 +12,25 @@ void RmCommand::execute(FileSystem &fs) {
     string path(getArgs());
     Directory *currDirectory = &fs.getWorkingDirectory();
 
-    if((path.compare("/")==0 )| (path.compare(fs.getWorkingDirectory().getAbsolutePath())==0))      //if it root or working directory
+
+    if((path.at(0)!='/' ))            //if the path is just file name, convert it to real path
+        path=currDirectory->getAbsolutePathWithouRoot()+"/"+path;
+
+    BaseFile *file = fs.getFileByPath(path);
+
+    bool sourceIsAParent = false;
+    while (fs.getWorkingDirectory().getAbsolutePath().compare("/")!=0 & !sourceIsAParent) {
+
+        if (file==&fs.getWorkingDirectory())
+            sourceIsAParent = true;
+
+        fs.cdCommand(fs.getWorkingDirectory().getParent()->getAbsolutePath());
+    }
+
+    if((path.compare("/")==0 )| (sourceIsAParent))      //if it root or working directory
         std::cout << "Can't remove directory" << std::endl;
     else {
 
-        if((path.at(0)!='/' )|((((path.length()>2 )&&( (path.at(0))!='.' )&(path.at(1)!='.')))))                                  //if the path is just file name, convert it to real path
-            path=currDirectory->getAbsolutePathWithouRoot()+"/"+path;
 
         int argType = fs.cdCommand(path);
 
@@ -27,7 +40,7 @@ void RmCommand::execute(FileSystem &fs) {
            // if(argType== 2 | path.at(0)!='/')
             //    path=currDirectory->getAbsolutePathWithouRoot()+"/"+path;
 
-            BaseFile *file = fs.getFileByPath(path);
+
             size_t found = path.find_last_of("/\\");
             if(found==0)    //it mean that the path is direct from root : EX "/newDir"
                 found=found+1;
@@ -70,4 +83,8 @@ void RmCommand::DeleteBaseFile(BaseFile *baseFile,string pathOfParentDir,FileSys
 
 string RmCommand::toString() {
     return "rm";
+}
+BaseCommand* RmCommand::clone(vector<BaseCommand *> &history) {
+    BaseCommand* copy = new RmCommand(getArgs());
+    return copy;
 }

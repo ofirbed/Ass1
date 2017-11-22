@@ -73,3 +73,9 @@ string CdCommand::toString() {
 
     return "cd";
 }
+
+BaseCommand* CdCommand::clone(vector<BaseCommand *> &history) {
+    BaseCommand* copy = new CdCommand(getArgs());
+    return copy;
+
+}

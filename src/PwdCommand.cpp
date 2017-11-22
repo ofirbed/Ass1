@@ -19,6 +19,10 @@ void PwdCommand::execute(FileSystem &fs) {
 string PwdCommand::toString() {
     return "pwd";
 }
+BaseCommand* PwdCommand::clone(vector<BaseCommand *> &history) {
+    BaseCommand* copy = new PwdCommand(getArgs());
+    return copy;
+}
 
 
 

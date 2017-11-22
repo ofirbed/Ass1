@@ -67,4 +67,10 @@ if(path.at(0)=='/') {//if start from root we do cd to root
 }
 string MkdirCommand::toString() {
     return  "mkdir";
-};
+}
+
+BaseCommand* MkdirCommand::clone(vector<BaseCommand *> &history) {
+
+    BaseCommand* copy = new MkdirCommand(getArgs());
+    return copy;
+}

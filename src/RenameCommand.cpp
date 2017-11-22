@@ -53,4 +53,9 @@ string RenameCommand::toString() {
     return "rename";
 }
 
+BaseCommand* RenameCommand::clone(vector<BaseCommand *> &history) {
+    BaseCommand* copy = new RenameCommand(getArgs());
+    return copy;
+}
+
 

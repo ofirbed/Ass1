@@ -32,6 +32,8 @@ string
 vector
 -
 
+/home/chaimbgu/Desktop/Ass1/Ass1/include/GlobalVariables.h
+
 /home/chaimbgu/Desktop/Ass1/Ass1/src/BaseCommand.cpp
 ../include/Commands.h
 /home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
@@ -71,6 +73,8 @@ iostream
 -
 ../include/Files.h
 /home/chaimbgu/Desktop/Ass1/Ass1/include/Files.h
+../include/GlobalVariables.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/GlobalVariables.h
 
 /home/chaimbgu/Desktop/Ass1/Ass1/src/Environment.cpp
 iostream
@@ -79,6 +83,8 @@ algorithm
 -
 ../include/Environment.h
 /home/chaimbgu/Desktop/Ass1/Ass1/include/Environment.h
+../include/GlobalVariables.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/GlobalVariables.h
 array
 -
 functional
@@ -90,6 +96,10 @@ iterator
 
 /home/chaimbgu/Desktop/Ass1/Ass1/src/ErrorCommand.cpp
 iostream
+-
+sstream
+-
+iterator
 -
 ../include/Commands.h
 /home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
@@ -107,6 +117,8 @@ iostream
 /home/chaimbgu/Desktop/Ass1/Ass1/src/FileSystem.cpp
 ../include/FileSystem.h
 /home/chaimbgu/Desktop/Ass1/Ass1/include/FileSystem.h
+../include/GlobalVariables.h
+/home/chaimbgu/Desktop/Ass1/Ass1/include/GlobalVariables.h
 algorithm
 -
 array

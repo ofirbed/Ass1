@@ -2,11 +2,11 @@
 0	verbose 2
 />history
 0	verbose 2
-1	history history
+1	history 
 />history
 0	verbose 2
-1	history history
-2	history history
+1	history 
+2	history 
 />******************************* 0 *******************************
 *******************************: Unknown command
 />mkfile rf1 100
@@ -273,9 +273,9 @@ Can't remove directory
 *******************************: Unknown command
 /d4>history
 0	verbose 2
-1	history history
-2	history history
-3	history history
+1	history 
+2	history 
+3	history 
 4	error *******************************
 5	mkfile rf1 100
 6	mkfile rf2 100

@@ -21,6 +21,11 @@ public:
 	FileSystem& getFileSystem() ; // Get a reference to the file system
 	void addToHistory(BaseCommand *command); // Add a new command to the history
 	const vector<BaseCommand*>& getHistory() const; // Return a reference to the history of commands
+	virtual  ~Environment();
+	Environment(const Environment &other);
+	Environment(Environment&& other);
+	Environment& operator=(const Environment &other);
+	Environment&operator=(Environment&& other);
 
 };
 

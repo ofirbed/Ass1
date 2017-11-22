@@ -20,12 +20,14 @@ CMakeFiles/ass1.dir/src/CpCommand.cpp.o: ../include/Files.h
 CMakeFiles/ass1.dir/src/CpCommand.cpp.o: ../src/CpCommand.cpp
 
 CMakeFiles/ass1.dir/src/Directory.cpp.o: ../include/Files.h
+CMakeFiles/ass1.dir/src/Directory.cpp.o: ../include/GlobalVariables.h
 CMakeFiles/ass1.dir/src/Directory.cpp.o: ../src/Directory.cpp
 
 CMakeFiles/ass1.dir/src/Environment.cpp.o: ../include/Commands.h
 CMakeFiles/ass1.dir/src/Environment.cpp.o: ../include/Environment.h
 CMakeFiles/ass1.dir/src/Environment.cpp.o: ../include/FileSystem.h
 CMakeFiles/ass1.dir/src/Environment.cpp.o: ../include/Files.h
+CMakeFiles/ass1.dir/src/Environment.cpp.o: ../include/GlobalVariables.h
 CMakeFiles/ass1.dir/src/Environment.cpp.o: ../src/Environment.cpp
 
 CMakeFiles/ass1.dir/src/ErrorCommand.cpp.o: ../include/Commands.h
@@ -43,6 +45,7 @@ CMakeFiles/ass1.dir/src/File.cpp.o: ../src/File.cpp
 
 CMakeFiles/ass1.dir/src/FileSystem.cpp.o: ../include/FileSystem.h
 CMakeFiles/ass1.dir/src/FileSystem.cpp.o: ../include/Files.h
+CMakeFiles/ass1.dir/src/FileSystem.cpp.o: ../include/GlobalVariables.h
 CMakeFiles/ass1.dir/src/FileSystem.cpp.o: ../src/FileSystem.cpp
 
 CMakeFiles/ass1.dir/src/HistoryCommand.cpp.o: ../include/Commands.h

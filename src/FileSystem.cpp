@@ -3,6 +3,7 @@
 //
 
 #include "../include/FileSystem.h"
+#include "../include/GlobalVariables.h"
 #include <algorithm>
 #include <array>
 #include <iostream>
@@ -12,7 +13,7 @@
 #include <sstream>
 #include <iterator>
 using namespace std;
-extern unsigned  int verbose;
+//extern unsigned  int verbose;
 Directory& FileSystem::getRootDirectory() const {
 
     return  *rootDirectory;

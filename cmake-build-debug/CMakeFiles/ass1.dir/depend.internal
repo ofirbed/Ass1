@@ -21,12 +21,14 @@ CMakeFiles/ass1.dir/src/CpCommand.cpp.o
  /home/chaimbgu/Desktop/Ass1/Ass1/src/CpCommand.cpp
 CMakeFiles/ass1.dir/src/Directory.cpp.o
  /home/chaimbgu/Desktop/Ass1/Ass1/include/Files.h
+ /home/chaimbgu/Desktop/Ass1/Ass1/include/GlobalVariables.h
  /home/chaimbgu/Desktop/Ass1/Ass1/src/Directory.cpp
 CMakeFiles/ass1.dir/src/Environment.cpp.o
  /home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
  /home/chaimbgu/Desktop/Ass1/Ass1/include/Environment.h
  /home/chaimbgu/Desktop/Ass1/Ass1/include/FileSystem.h
  /home/chaimbgu/Desktop/Ass1/Ass1/include/Files.h
+ /home/chaimbgu/Desktop/Ass1/Ass1/include/GlobalVariables.h
  /home/chaimbgu/Desktop/Ass1/Ass1/src/Environment.cpp
 CMakeFiles/ass1.dir/src/ErrorCommand.cpp.o
  /home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h
@@ -44,6 +46,7 @@ CMakeFiles/ass1.dir/src/File.cpp.o
 CMakeFiles/ass1.dir/src/FileSystem.cpp.o
  /home/chaimbgu/Desktop/Ass1/Ass1/include/FileSystem.h
  /home/chaimbgu/Desktop/Ass1/Ass1/include/Files.h
+ /home/chaimbgu/Desktop/Ass1/Ass1/include/GlobalVariables.h
  /home/chaimbgu/Desktop/Ass1/Ass1/src/FileSystem.cpp
 CMakeFiles/ass1.dir/src/HistoryCommand.cpp.o
  /home/chaimbgu/Desktop/Ass1/Ass1/include/Commands.h

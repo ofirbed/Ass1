@@ -49,5 +49,10 @@ void MkfileCommand::execute(FileSystem &fs) {
 string MkfileCommand::toString() {
     return "mkfile";
 }
+BaseCommand* MkfileCommand::clone(vector<BaseCommand *> &history) {
+    BaseCommand* copy = new MkfileCommand(getArgs());
+    return copy;
+
+}
 
 
