@@ -24,10 +24,7 @@ void Directory::clear(int childSize) {
 
     for (int i = 0; i < childSize; i++) {
         BaseFile *child = getChildren().at(0);
-        if (child->getType().compare("FILE") == 0) {     //if the basefile is a file
-            //removeFile(child->getName());
-            children.erase(children.begin());
-        } else {
+
             children.erase(children.begin());
             delete (child);
         }
@@ -35,7 +32,7 @@ void Directory::clear(int childSize) {
     }
 
     //delete (children);
-}
+
 
 
 
